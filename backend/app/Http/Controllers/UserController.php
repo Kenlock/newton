@@ -1,0 +1,148 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\User;
+use Illuminate\Http\Request;
+
+class UserController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
+        // return User::all();
+        return User::where('status', 'siswa')->get();
+    }
+
+    public function studentsCount()
+    {
+        return User::where('status', 'siswa')->get()->count();
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+        $user = new User;
+        $user->nisn = $request->nisn;
+        $user->nama = $request->nama;
+        $user->kelas = $request->kelas;
+        $user->jurusan = $request->jurusan;
+        $user->alamat = $request->alamat;
+        $user->telp = $request->telp;
+        $user->email = $request->email;
+        $user->password = $request->password;
+        $user->angkatan = $request->angkatan;
+        $user->status = $request->status;
+        $user->aktif = $request->aktif;
+        $user->save();
+        return response()->json([
+            'msg' => '1 Data recored',
+            'status' => $request->status,
+        ]);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\User  $user
+     * @return \Illuminate\Http\Response
+     */
+    public function show(User $user)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\User  $user
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(User $user)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\User  $user
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //        
+
+        $user = User::findOrFail($id);
+
+        $user->nisn = $request->nisn;
+        $user->nama = $request->nama;
+        $user->kelas = $request->kelas;
+        $user->jurusan = $request->jurusan;
+        $user->alamat = $request->alamat;
+        $user->telp = $request->telp;
+        $user->email = $request->email;
+        $user->password = $request->password;
+        $user->angkatan = $request->angkatan;
+        $user->status = $request->status;
+        $user->aktif = $request->aktif;
+
+        $user->save();
+        return response()->json([
+            'msg' => '1 Data Updated',
+        ]);
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\User  $user
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(User $user, $id)
+    {
+        //
+        User::findOrFail($id)->delete();
+        return '1 Data Deleted';
+    }
+
+    public function login(Request $request)
+    {
+        $user = User::where('email', $request->email)->first();
+
+        if ($user) {
+            if ($user->password == $request->password) {
+                return response()->json([
+                    'msg' => 'Login Success',
+                    'status' => $user->status,
+                ]);
+            } else {
+                return 'Your email or password is invalid !';
+            }
+        } else {
+            return 'Register your account first ! ';
+        }
+    }
+}
