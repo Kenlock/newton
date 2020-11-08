@@ -34,7 +34,7 @@
                 tag="button"
                 class=" btn v-btn-outline-danger col-3 ml-2"
               >
-                register
+                Register
               </router-link>
             </div>
           </div>
@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import api from "@/utils/api";
 
 export default {
   data() {
@@ -64,28 +64,41 @@ export default {
     };
   },
   methods: {
-    login() {
-      axios
-        .post("login", this.loginData)
-        .then((res) => {
-          if (res.data.msg == "Login Success" && res.data.status == "admin") {
-            localStorage.setItem(
-              "school-website-login",
-              JSON.stringify(res.data)
-            );
-          } else if (
-            res.data.msg == "Login Success" &&
-            res.data.status == "siswa"
-          ) {
-            localStorage.setItem(
-              "school-website-login",
-              JSON.stringify(res.data)
-            );
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+    async login() {
+      // axios
+      //   .post("login", this.loginData)
+      //   .then((res) => {
+      //     if (res.data.msg == "Login Success" && res.data.status == "admin") {
+      //       localStorage.setItem(
+      //         "school-website-login",
+      //         JSON.stringify(res.data)
+      //       );
+      //       this.$router.push("/admin");
+      //     } else if (
+      //       res.data.msg == "Login Success" &&
+      //       res.data.status == "siswa"
+      //     ) {
+      //       localStorage.setItem(
+      //         "school-website-login",
+      //         JSON.stringify(res.data)
+      //       );
+      //     }
+      //   })
+      //   .catch((err) => {
+      //     console.log(err);
+      //   });
+
+      const res = await api.post("login", this.loginData);
+
+      if (res.data.msg == "Login Success" && res.data.status == "admin") {
+        localStorage.setItem("school-website-login", JSON.stringify(res.data));
+        this.$router.push("/admin");
+      } else if (
+        res.data.msg == "Login Success" &&
+        res.data.status == "siswa"
+      ) {
+        localStorage.setItem("school-website-login", JSON.stringify(res.data));
+      }
     },
   },
 };

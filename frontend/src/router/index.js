@@ -9,7 +9,11 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: ()=>import('@/views/Home')
+    component: ()=>import('@/views/Home'),
+    beforeEnter: (to,from,next)=>{
+      console.log('hello')
+      next()
+    }
   },
   {
     path: "/about",
@@ -56,7 +60,7 @@ const routes = [
   {
     path : '/student',
     name : 'Student',
-    component : ()=>import('@/views/siswa/Student'),
+    component : ()=>import('@/views/student/Student'),
     beforeEnter : (to,from,next) => {
       if(ls == null){
         next('/login')
@@ -65,8 +69,13 @@ const routes = [
           next()
         }
       }    
-    },        
+    },            
   },  
+  {
+    path : '/admin/student',
+    name : 'Student Dashboard',
+    component : ()=> import('@/views/admin/student/Student')
+  }
 ];
 
 

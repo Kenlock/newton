@@ -43,7 +43,8 @@
 </template>
 
 <script>
-import Axios from "axios";
+// import Axios from "axios";
+import api from "@/utils/api";
 
 export default {
   data() {
@@ -56,15 +57,18 @@ export default {
     this.studentsReport();
   },
   methods: {
-    studentsReport() {
-      Axios.get("user")
-        .then((result) => {
-          this.allStudents = result.data;
-          this.studentsCount = result.data.length;
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+    async studentsReport() {
+      // Axios.get("user")
+      //   .then((result) => {
+      //     this.allStudents = result.data;
+      //     this.studentsCount = result.data.length;
+      //   })
+      //   .catch((err) => {
+      //     console.log(err);
+      //   });
+
+      const res = await api.get("user");
+      this.allStudents = res.data;
     },
   },
 };
