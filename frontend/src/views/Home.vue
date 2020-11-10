@@ -352,48 +352,44 @@
     </section>
     <!-- end -->
 
-    <!-- newlaster section -->
+    <!-- contact us section -->
     <section>
-      <div class="container">
+      <div class="container" data-aos="fade-up">
         <div class="row">
-          <div class="col-lg-6" data-aos="fade-right">
-            <div class=" h1 font-weight-bold">
-              Contact <span class="v-text-warning">Us</span>
+          <div class="col-lg-12 text-center">
+            <div class="h1 font-weight-bold">
+              Contact <span class=" v-text-warning">Us</span>
             </div>
-            <p class="text-muted">We'd love to hear from you</p>
-            <div class="form-group">
-              <input
-                class=" border-0 form-control shadow "
-                placeholder="Email"
-              />
-            </div>
-            <div class="form-group">
-              <textarea
-                name=""
-                id=""
-                cols="30"
-                rows="8"
-                class=" border-0 form-control shadow  "
-              >
-              Your text here...</textarea
-              >
-            </div>
-            <div class="form-group">
-              <button class="btn v-btn-danger text-white col-3">Send</button>
-              <router-link
-                to="/login"
-                tag="button"
-                class="btn v-btn-outline-danger col-3 ml-2"
-                >Join Us Now</router-link
-              >
-            </div>
+            <div class=" text-muted">We would like to here you</div>
           </div>
-          <div class="col-lg-6" data-aos="fade-left">
-            <img
-              src="@/assets/img/login_banner.jpg"
-              alt=""
-              class="img-fluid rounded-lg shadow"
-            />
+        </div>
+        <div class="row mt-3">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <div class=" w-50">
+              <div class=" form-group">
+                <input
+                  type="email"
+                  placeholder="email@email.com"
+                  class=" form-control "
+                />
+              </div>
+              <div class=" form-group">
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  class=" form-control "
+                >
+Your text here...</textarea
+                >
+              </div>
+              <div class="form-group text-center">
+                <button class=" btn v-btn-danger text-white px-5 py-2">
+                  Send
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

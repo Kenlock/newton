@@ -25,8 +25,12 @@
             <b-navbar-nav>
               <router-link to="/" tag="b-nav-item">Home</router-link>
               <router-link to="/about" tag="b-nav-item">About Us</router-link>
-              <router-link to="/login" tag="b-nav-item">Login</router-link>
-              <router-link to="/student" tag="b-nav-item">LMS</router-link>
+              <div v-if="login == false || typeof login == 'undefined'">
+                <router-link to="/login" tag="b-nav-item">Login</router-link>
+              </div>
+              <div v-if="login && status == 'siswa'">
+                <router-link to="/student" tag="b-nav-item">LMS</router-link>
+              </div>
               <div v-if="login">
                 <button class="btn v-btn-danger text-white" @click="logout()">
                   Log out
@@ -43,7 +47,7 @@
 
 <script>
 export default {
-  props: ["login"],
+  props: ["login", "status"],
   methods: {
     logout() {
       localStorage.removeItem("school-website-login");

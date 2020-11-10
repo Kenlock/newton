@@ -8,6 +8,8 @@
 
     <!-- footer -->
     <footer-app></footer-app>
+
+    <copyright-app></copyright-app>
   </div>
 </template>
 <script>
@@ -15,6 +17,7 @@ export default {
   components: {
     // "navbar-app": () => import("@/components/utils/Navbar"),
     "footer-app": () => import("@/components/utils/Footer"),
+    "copyright-app": () => import("@/components/utils/Copyright"),
   },
 };
 </script>

@@ -1,14 +1,18 @@
 <template>
-  <div>
-    <footer class="pt-5 ">
-      <div class="container-fluid v-bg-warning py-3">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <div class=" font-weight-bold">Made with 💖 by Christian</div>
+  <div class=" bg-light">
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="h3 font-weight-bold v-text-warning">
+            Vocation High School
           </div>
+          <small class=" text-justify">
+            We are on mission to provide a premier educational experience
+            customized to needs of each student.
+          </small>
         </div>
       </div>
-    </footer>
+    </div>
   </div>
 </template>
 
