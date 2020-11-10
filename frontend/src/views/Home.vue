@@ -1,5 +1,7 @@
 <template>
   <div class=" bg-light">
+    <app-header></app-header>
+
     <!-- jumbotron -->
     <div class=" jumbotron jumbotron-fluid v-bg-warning">
       <div class="container">
@@ -403,5 +405,8 @@
 <script>
 export default {
   name: "Home",
+  components: {
+    "app-header": () => import("@/components/utils/Navbar"),
+  },
 };
 </script>

@@ -23,7 +23,8 @@
 </template>
 
 <script>
-import Axios from "axios";
+import api from "@/utils/api";
+
 export default {
   data() {
     return {
@@ -34,15 +35,9 @@ export default {
     this.getNews();
   },
   methods: {
-    getNews() {
-      Axios.get("news")
-        .then((result) => {
-          this.news = result.data;
-          console.log(this.news);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+    async getNews() {
+      const res = await api.get("news");
+      this.news = res.data;
     },
   },
 };

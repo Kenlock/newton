@@ -1,7 +1,12 @@
 <template>
   <div>
     <!-- navbar  -->
-    <b-navbar toggleable="lg" class="bg-warning fixed-top">
+
+    <b-navbar
+      toggleable="lg"
+      class="bg-warning"
+      :class="{ 'fixed-top': login == false }"
+    >
       <b-container>
         <router-link
           to="/"
@@ -22,9 +27,11 @@
               <router-link to="/about" tag="b-nav-item">About Us</router-link>
               <router-link to="/login" tag="b-nav-item">Login</router-link>
               <router-link to="/student" tag="b-nav-item">LMS</router-link>
-              <button class="btn v-btn-danger text-white" @click="logout()">
-                Log out
-              </button>
+              <div v-if="login">
+                <button class="btn v-btn-danger text-white" @click="logout()">
+                  Log out
+                </button>
+              </div>
             </b-navbar-nav>
           </b-navbar-nav>
         </b-collapse>
@@ -36,9 +43,11 @@
 
 <script>
 export default {
+  props: ["login"],
   methods: {
     logout() {
       localStorage.removeItem("school-website-login");
+      location.reload();
     },
   },
 };

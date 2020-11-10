@@ -1,5 +1,7 @@
 <template>
   <div>
+    <app-header></app-header>
+
     <div class="jumbotron jumbotron-fluid bg-white">
       <div class="container">
         <div class="row">
@@ -86,7 +88,12 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "About",
+  components: {
+    "app-header": () => import("@/components/utils/Navbar"),
+  },
+};
 </script>
 
 <style></style>

@@ -1,5 +1,7 @@
 <template>
   <div>
+    <app-header :login="loginInfo"></app-header>
+
     <div class="jumbotron jumbotron-fluid bg-white">
       <div class="container pt-5">
         <div class="row">
@@ -61,38 +63,19 @@ export default {
         email: "",
         password: "",
       },
+      loginInfo: false,
     };
+  },
+  components: {
+    "app-header": () => import("@/components/utils/Navbar"),
   },
   methods: {
     async login() {
-      // axios
-      //   .post("login", this.loginData)
-      //   .then((res) => {
-      //     if (res.data.msg == "Login Success" && res.data.status == "admin") {
-      //       localStorage.setItem(
-      //         "school-website-login",
-      //         JSON.stringify(res.data)
-      //       );
-      //       this.$router.push("/admin");
-      //     } else if (
-      //       res.data.msg == "Login Success" &&
-      //       res.data.status == "siswa"
-      //     ) {
-      //       localStorage.setItem(
-      //         "school-website-login",
-      //         JSON.stringify(res.data)
-      //       );
-      //     }
-      //   })
-      //   .catch((err) => {
-      //     console.log(err);
-      //   });
-
       const res = await api.post("login", this.loginData);
-
       if (res.data.msg == "Login Success" && res.data.status == "admin") {
         localStorage.setItem("school-website-login", JSON.stringify(res.data));
-        this.$router.push("/admin");
+        // this.$router.push("/admin");
+        location.reload();
       } else if (
         res.data.msg == "Login Success" &&
         res.data.status == "siswa"

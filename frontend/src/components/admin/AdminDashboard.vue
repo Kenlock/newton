@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container pt-5 mt-5">
+    <div class="container mt-5">
       <div class="row">
         <div class="col-lg-12">
           <b class="h5 ">Analytics Dashbord 😍</b>
@@ -14,10 +14,10 @@
               <router-link to="/admin" tag="li" class="breadcrumb-item">
                 <a class="text-dark">Dashbord</a>
               </router-link>
-              <router-link to="/students" tag="li" class="breadcrumb-item">
+              <router-link to="/admin/student" tag="li" class="breadcrumb-item">
                 <a class="text-dark">Students</a>
               </router-link>
-              <router-link to="/news" tag="li" class="breadcrumb-item">
+              <router-link to="/news/news" tag="li" class="breadcrumb-item">
                 <a class="text-dark">News</a>
               </router-link>
             </ol>

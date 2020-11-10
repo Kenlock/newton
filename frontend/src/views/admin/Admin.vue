@@ -1,5 +1,7 @@
 <template>
   <div>
+    <app-header :login="true"></app-header>
+
     <admin-dashboard></admin-dashboard>
 
     <admin-panel
@@ -26,12 +28,7 @@
 </template>
 
 <script>
-import AdminDashboard from "@/components/admin/AdminDashboard.vue";
-import AdminPanel from "@/components/admin/AdminPanel.vue";
-import StudentsReport from "@/components/admin/students/StudentsReport.vue";
-import NewsReport from "@/components/admin/news/NewsReport.vue";
-
-import Axios from "axios";
+import api from "@/utils/api";
 
 export default {
   data() {
@@ -41,33 +38,25 @@ export default {
     };
   },
   components: {
-    "admin-dashboard": AdminDashboard,
-    "admin-panel": AdminPanel,
-    "students-report": StudentsReport,
-    "news-report": NewsReport,
+    "admin-dashboard": () => import("@/components/admin/AdminDashboard"),
+    "admin-panel": () => import("@/components/admin/AdminPanel"),
+    "students-report": () =>
+      import("@/components/admin/students/StudentsReport"),
+    "news-report": () => import("@/components/admin/news/NewsReport"),
+    "app-header": () => import("@/components/utils/Navbar"),
   },
   created() {
     this.getAmountOfStudents();
     this.getAmountOfNews();
   },
   methods: {
-    getAmountOfStudents() {
-      Axios.get("/user")
-        .then((result) => {
-          this.studentsAmount = result.data.length;
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+    async getAmountOfStudents() {
+      const res = await api.get("/user");
+      this.studentsAmount = res.data.length;
     },
-    getAmountOfNews() {
-      Axios.get("/news")
-        .then((result) => {
-          this.newsAmount = result.data.length;
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+    async getAmountOfNews() {
+      const res = await api.get("/news");
+      this.newsAmount = res.data.length;
     },
   },
 };

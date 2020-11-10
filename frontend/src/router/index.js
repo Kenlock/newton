@@ -9,11 +9,7 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: ()=>import('@/views/Home'),
-    beforeEnter: (to,from,next)=>{
-      console.log('hello')
-      next()
-    }
+    component: ()=>import('@/views/Home'),    
   },
   {
     path: "/about",
@@ -29,7 +25,7 @@ const routes = [
         next()
       }else{
         if(ls.msg == 'Login Success'){
-          if(ls.status == 'admin'){
+          if(ls.status == 'admin'){            
             next('/admin')
           }else if(ls.status == 'siswa'){
             next('/student')

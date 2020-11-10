@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- navbar -->
-    <navbar-app></navbar-app>
+    <!-- <navbar-app></navbar-app> -->
 
     <!-- main content -->
     <router-view></router-view>
@@ -10,11 +10,10 @@
     <footer-app></footer-app>
   </div>
 </template>
-
 <script>
 export default {
   components: {
-    "navbar-app": () => import("@/components/utils/Navbar"),
+    // "navbar-app": () => import("@/components/utils/Navbar"),
     "footer-app": () => import("@/components/utils/Footer"),
   },
 };
