@@ -17,7 +17,7 @@
               <router-link to="/admin/student" tag="li" class="breadcrumb-item">
                 <a class="text-dark">Students</a>
               </router-link>
-              <router-link to="/news/news" tag="li" class="breadcrumb-item">
+              <router-link to="/admin/news" tag="li" class="breadcrumb-item">
                 <a class="text-dark">News</a>
               </router-link>
             </ol>

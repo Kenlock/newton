@@ -37,7 +37,7 @@ const routes = [
   {
     path : '/admin',
     name : 'Admin',
-    component : ()=>import('@/views/admin/Admin'),        
+    component : ()=>import('@/views/admin/Admin'),            
     beforeEnter : (to,from,next) => {
       if(ls == null){
         next('/login')
@@ -45,8 +45,15 @@ const routes = [
         if(ls.msg == 'Login Success' && ls.status == 'admin'){
           next()
         }
-      }
-    }
+      }      
+    },      
+    children : [      
+      {
+        path : 'student', 
+        name : 'Student',
+        component : ()=> import('@/views/admin/student/Student')
+      },            
+    ],
   },
   {
     path : '/register',
@@ -67,11 +74,6 @@ const routes = [
       }    
     },            
   },  
-  {
-    path : '/admin/student',
-    name : 'Student Dashboard',
-    component : ()=> import('@/views/admin/student/Student')
-  }
 ];
 
 

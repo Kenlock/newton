@@ -10,6 +10,14 @@ export default{
 
     post(url,data){
         return axios.post(url,data)
+    },
+
+    put(url,id,data){
+        return axios.put(url+id,data)
+    },
+
+    destroy(url,id){
+        return axios.destroy(url+id)
     }
 
 }
