@@ -139,7 +139,10 @@ class UserController extends Controller
                     'status' => $user->status,
                 ]);
             } else {
-                return 'Your email or password is invalid !';
+                return response()->json([
+                    'status' => 'Login Fail',
+                    'msg' => 'Your password or email is invalid'
+                ]);
             }
         } else {
             return 'Register your account first ! ';
