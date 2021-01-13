@@ -444,6 +444,10 @@
             </div>
         </section>
         <!-- end -->
+
+        <app-footer></app-footer>
+
+        <app-copyright></app-copyright>
     </div>
 </template>
 
@@ -452,6 +456,8 @@ export default {
     name: "Home",
     components: {
         "app-header": () => import("@/components/utils/Navbar"),
+        "app-footer": () => import("@/components/utils/Footer"),
+        "app-copyright": () => import("@/components/utils/Copyright"),
     },
 };
 </script>

@@ -1,24 +1,21 @@
 <template>
-  <div id="app">
-    <!-- navbar -->
-    <!-- <navbar-app></navbar-app> -->
+    <div id="app">
+        <!-- navbar -->
+        <!-- <navbar-app></navbar-app> -->
 
-    <!-- main content -->
-    <router-view></router-view>
+        <!-- main content -->
+        <router-view></router-view>
 
-    <!-- footer -->
-    <footer-app></footer-app>
-
-    <copyright-app></copyright-app>
-  </div>
+        <!-- footer -->
+    </div>
 </template>
 <script>
 export default {
-  components: {
-    // "navbar-app": () => import("@/components/utils/Navbar"),
-    "footer-app": () => import("@/components/utils/Footer"),
-    "copyright-app": () => import("@/components/utils/Copyright"),
-  },
+    components: {
+        // "navbar-app": () => import("@/components/utils/Navbar"),
+        // "footer-app": () => import("@/components/utils/Footer"),
+        // "copyright-app": () => import("@/components/utils/Copyright"),
+    },
 };
 </script>
 
@@ -27,31 +24,31 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,500&display=swap");
 
 * {
-  font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .c-pointer {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .v-text-warning {
-  color: #ff4b33;
+    color: #ff4b33;
 }
 
 .v-bg-warning {
-  background-color: #ffbd1d;
+    background-color: #ffbd1d;
 }
 
 .v-btn-danger {
-  background-color: #ff4b33 !important;
+    background-color: #ff4b33 !important;
 }
 
 .v-btn-outline-danger {
-  border: 1px solid #ff4b33;
+    border: 1px solid #ff4b33;
 }
 
 .v-avatar {
-  width: 70px;
-  height: 70px;
+    width: 70px;
+    height: 70px;
 }
 </style>
