@@ -1,7 +1,10 @@
 <template>
     <div>
         <!-- panel info -->
-        <admin-panel :infoData="info"></admin-panel>
+        <admin-panel
+            :studentsAmount="info.students"
+            :newsAmount="info.news"
+        ></admin-panel>
 
         <!-- main  -->
         <div class="container pt-4">
@@ -25,6 +28,7 @@ export default {
         return {
             info: {
                 students: "",
+                news: "",
             },
         };
     },
@@ -36,11 +40,16 @@ export default {
     },
     created() {
         this.getStudents();
+        this.getNews();
     },
     methods: {
         async getStudents() {
             const res = await api.get("user");
             this.info.students = res.data.length;
+        },
+        async getNews() {
+            const res = await api.get("news");
+            this.info.news = res.data.length;
         },
     },
 };
