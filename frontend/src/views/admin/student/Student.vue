@@ -60,7 +60,18 @@
                                         </button>
                                     </td>
                                     <td>
-                                        <button class="btn btn-danger">
+                                        <!-- <button
+                                            class="btn btn-danger"
+                                            @click="destroy('user', s.id)"
+                                        >
+                                            Delete
+                                        </button> -->
+                                        <button
+                                            class="btn btn-danger"
+                                            @click="
+                                                deleteStudents('user', s.id)
+                                            "
+                                        >
                                             Delete
                                         </button>
                                     </td>
@@ -76,12 +87,10 @@
 
 <script>
 import api from "@/utils/api";
+import destroyMixin from "@/utils/destroyMixin";
 
 export default {
-    components: {
-        // "app-header": () => import("@/components/utils/Navbar"),
-        // "admin-dashboard": () => import("@/components/admin/AdminDashboard"),
-    },
+    mixins: [destroyMixin],
     data() {
         return {
             studentData: "",
@@ -92,10 +101,20 @@ export default {
         this.getStudents();
     },
     methods: {
-        async getStudents() {
-            const res = await api.get("user");
-            this.studentData = res.data;
-        },
+        // async getStudents() {
+        //     const res = await api.get("user");
+        //     this.studentData = res.data;
+        // },
+        // async deleteStudents(url, id) {
+        /**
+         *  * this.destroy is get from destroyMixin
+         *  * asign retrun value to res variable
+         */
+        //     const res = await this.destroy(url, id);
+        //     if (res === "1 Data Deleted") {
+        //         this.getStudents();
+        //     }
+        // },
     },
 };
 </script>

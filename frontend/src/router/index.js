@@ -85,7 +85,7 @@ const routes = [
     },
     {
         path: "/student",
-        name: "Student",
+        name: "client",
         component: () => import("@/views/student/Student"),
         beforeEnter: (to, from, next) => {
             if (ls == null) {

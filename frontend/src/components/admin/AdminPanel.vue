@@ -15,7 +15,7 @@
                                 <div class="text-muted h5">Jumlah Siswa</div>
                                 <!-- props from Admin.vue -->
                                 <h1 class="card-title text-success">
-                                    {{ studentsAmount }}
+                                    {{ info.students }}
                                 </h1>
                             </div>
                             <div class="col-4  text-center">
@@ -25,7 +25,7 @@
                             <div class="col-4  text-center">
                                 <div class="text-muted  h5">Jumlah Berita</div>
                                 <h1 class="card-title text-info">
-                                    {{ newsAmount }}
+                                    {{ info.news }}
                                 </h1>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
 
 <script>
 export default {
-    props: ["studentsAmount", "newsAmount"],
+    props: ["info"],
     data() {
         return {};
     },

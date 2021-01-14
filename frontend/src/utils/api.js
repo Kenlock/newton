@@ -15,6 +15,6 @@ export default {
     },
 
     destroy(url, id) {
-        return axios.destroy(url + id);
+        return axios.delete(`${url}/${id}`);
     },
 };
