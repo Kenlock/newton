@@ -13,7 +13,7 @@
             </div>
             <div class="card-footer text-center">
                 <router-link
-                    to="/news"
+                    to="/admin/news"
                     class="badge badge-primary border-0 py-2 w-25 rounded"
                     >View more</router-link
                 >
