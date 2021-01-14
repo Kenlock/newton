@@ -49,7 +49,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="s in studentData" :key="s.id">
+                                <tr v-for="s in data" :key="s.id">
                                     <td>{{ s.nisn }}</td>
                                     <td>{{ s.nama }}</td>
                                     <td>{{ s.kelas }}</td>
@@ -60,20 +60,20 @@
                                         </button>
                                     </td>
                                     <td>
-                                        <!-- <button
+                                        <button
                                             class="btn btn-danger"
                                             @click="destroy('user', s.id)"
                                         >
                                             Delete
-                                        </button> -->
-                                        <button
+                                        </button>
+                                        <!-- <button
                                             class="btn btn-danger"
                                             @click="
                                                 deleteStudents('user', s.id)
                                             "
                                         >
                                             Delete
-                                        </button>
+                                        </button> -->
                                     </td>
                                 </tr>
                             </tbody>
@@ -86,35 +86,17 @@
 </template>
 
 <script>
-import api from "@/utils/api";
 import destroyMixin from "@/utils/destroyMixin";
 
 export default {
     mixins: [destroyMixin],
     data() {
         return {
-            studentData: "",
-            isAdd: false,
+            isAdd: null,
         };
     },
     mounted() {
-        this.getStudents();
-    },
-    methods: {
-        // async getStudents() {
-        //     const res = await api.get("user");
-        //     this.studentData = res.data;
-        // },
-        // async deleteStudents(url, id) {
-        /**
-         *  * this.destroy is get from destroyMixin
-         *  * asign retrun value to res variable
-         */
-        //     const res = await this.destroy(url, id);
-        //     if (res === "1 Data Deleted") {
-        //         this.getStudents();
-        //     }
-        // },
+        this.getData("user");
     },
 };
 </script>

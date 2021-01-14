@@ -8,14 +8,22 @@ export default {
      * * return a response of request
      */
 
+    data() {
+        return {
+            data: "",
+        };
+    },
+
     methods: {
-        async getData(url, props) {
+        async getData(url) {
             const res = await api.get(url);
-            return res.data;
+            this.data = res.data;
         },
         async destroy(url, id) {
             const res = await api.destroy(url, id);
-            return res.data;
+            if (res.data === "1 Data Deleted") {
+                this.getData(url);
+            }
         },
     },
 };
