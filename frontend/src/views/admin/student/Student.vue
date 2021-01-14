@@ -1,6 +1,6 @@
 <template>
     <div>
-        <app-header :login="true"></app-header>
+        <!-- <app-header :login="true"></app-header> -->
 
         <!-- <admin-dashboard></admin-dashboard> -->
 
@@ -79,7 +79,7 @@ import api from "@/utils/api";
 
 export default {
     components: {
-        "app-header": () => import("@/components/utils/Navbar"),
+        // "app-header": () => import("@/components/utils/Navbar"),
         // "admin-dashboard": () => import("@/components/admin/AdminDashboard"),
     },
     data() {

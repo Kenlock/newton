@@ -12,7 +12,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <router-link
-                                to="/admin"
+                                to="/admin/dashboard"
                                 tag="li"
                                 class="breadcrumb-item"
                             >

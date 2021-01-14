@@ -67,15 +67,18 @@ const routes = [
         },
         children: [
             {
-                path: "/dashboard",
-                component: () => "@/views/admin/Dashboard",
+                path: "dashboard",
+                name: "Dashboard",
+                component: () => import("@/views/admin/Dashboard"),
             },
             {
-                path: "/student",
+                path: "student",
+                name: "Student",
                 component: () => import("@/views/admin/student/Student"),
             },
             {
-                path: "/news",
+                path: "news",
+                name: "News",
                 component: () => import("@/views/admin/news/News"),
             },
         ],
