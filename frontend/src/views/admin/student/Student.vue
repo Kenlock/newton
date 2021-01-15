@@ -86,17 +86,35 @@
 </template>
 
 <script>
+// import api from "@/utils/api";
 import destroyMixin from "@/utils/destroyMixin";
 
 export default {
     mixins: [destroyMixin],
     data() {
         return {
-            isAdd: null,
+            // studentData: "",
+            isAdd: false,
         };
     },
     mounted() {
         this.getData("user");
+    },
+    methods: {
+        // async getStudents() {
+        //     const res = await api.get("user");
+        //     this.studentData = res.data;
+        // },
+        // async deleteStudents(url, id) {
+        /**
+         *  * this.destroy is get from destroyMixin
+         *  * asign retrun value to res variable
+         */
+        //     const res = await this.destroy(url, id);
+        //     if (res === "1 Data Deleted") {
+        //         this.getStudents();
+        //     }
+        // },
     },
 };
 </script>
