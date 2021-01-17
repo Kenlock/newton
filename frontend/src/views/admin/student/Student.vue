@@ -172,6 +172,13 @@
                                     Create
                                 </button>
                                 <button
+                                    class="d-none btn btn-warning mr-3"
+                                    :class="{ 'd-inline': isAdd }"
+                                    @click="update()"
+                                >
+                                    Update
+                                </button>
+                                <button
                                     class="btn btn-danger"
                                     @click="clearInputs(newUser)"
                                 >
@@ -206,7 +213,10 @@
                                     <td>{{ s.kelas }}</td>
                                     <td>{{ s.jurusan }}</td>
                                     <td>
-                                        <button class="btn btn-warning">
+                                        <button
+                                            class="btn btn-warning"
+                                            @click="edit(s)"
+                                        >
                                             Edit
                                         </button>
                                     </td>
@@ -239,7 +249,6 @@ export default {
     mixins: [getDataMixin, destroyMixin, clearInputMixin],
     data() {
         return {
-            // isAdd: null,
             newUser: {
                 nisn: "",
                 nama: "",
@@ -252,6 +261,7 @@ export default {
                 angkatan: "",
                 status: "",
                 aktif: "",
+                id: "",
             },
         };
     },
@@ -261,9 +271,22 @@ export default {
     methods: {
         async store() {
             const res = await api.post("user", this.newUser);
-            if (res.data.msg === "1 Data recored") {
+            if (res.data.msg === "1 Data Recorded") {
                 this.clearInputs(this.newUser);
-                // this.isAdd = !this.isAdd;
+                this.getData("user");
+            }
+        },
+        edit(props) {
+            this.close();
+            for (let i in this.newUser) {
+                this.newUser[i] = props[i];
+            }
+            console.log(this.newUser);
+        },
+        async update() {
+            const res = await api.put("user", this.newUser.id, this.newUser);
+            if (res.data.msg === "1 Data Updated") {
+                this.clearInputs(this.newUser);
                 this.getData("user");
             }
         },

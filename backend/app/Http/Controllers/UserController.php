@@ -57,7 +57,7 @@ class UserController extends Controller
         $user->aktif = $request->aktif;
         $user->save();
         return response()->json([
-            'msg' => '1 Data recored',
+            'msg' => '1 Data Recorded',
             'status' => $request->status,
         ]);
     }

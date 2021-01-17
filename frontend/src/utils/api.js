@@ -11,7 +11,7 @@ export default {
     },
 
     put(url, id, data) {
-        return axios.put(url + id, data);
+        return axios.put(`${url}/${id}`, data);
     },
 
     destroy(url, id) {

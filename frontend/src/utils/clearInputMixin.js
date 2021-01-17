@@ -2,9 +2,7 @@ export default {
     /**
      * @param {props} object that want to clear
      * TODO : create a global function to clear  all inputs
-     *  * will clear all inputs
-     *  * will just close
-     *  * will close and clear all inputs
+     *  * will close tabs and clear all inputs
      */
 
     data() {
@@ -18,6 +16,9 @@ export default {
             for (let i in props) {
                 props[i] = "";
             }
+            this.close();
+        },
+        close() {
             this.isAdd = !this.isAdd;
         },
     },
