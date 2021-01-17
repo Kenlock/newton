@@ -5,17 +5,11 @@ export default {
     /**
      * @param { url } endpoint of api
      * @param { id } id for delete request
-     * todo : create a global function for delete request
-     * * return a response of request
+     * TODO : create a global function for DELETE / DESTROY request
+     * * return a response DELETE of request of an endpoint
      */
 
     mixin: [getDataMixin],
-
-    data() {
-        return {
-            data: "",
-        };
-    },
 
     methods: {
         // async getData(url) {

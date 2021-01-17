@@ -173,7 +173,7 @@
                                 </button>
                                 <button
                                     class="btn btn-danger"
-                                    @click="clearInput(newUser)"
+                                    @click="clearInputs(newUser)"
                                 >
                                     Cancle
                                 </button>
@@ -239,7 +239,7 @@ export default {
     mixins: [getDataMixin, destroyMixin, clearInputMixin],
     data() {
         return {
-            isAdd: null,
+            // isAdd: null,
             newUser: {
                 nisn: "",
                 nama: "",
@@ -262,9 +262,9 @@ export default {
         async store() {
             const res = await api.post("user", this.newUser);
             if (res.data.msg === "1 Data recored") {
-                this.clearInput(this.newUser);
+                this.clearInputs(this.newUser);
+                // this.isAdd = !this.isAdd;
                 this.getData("user");
-                this.isAdd = !null;
             }
         },
     },
