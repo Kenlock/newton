@@ -200,7 +200,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="s in data" :key="s.id">
+                                <tr v-for="s in getReqData" :key="s.id">
                                     <td>{{ s.nisn }}</td>
                                     <td>{{ s.nama }}</td>
                                     <td>{{ s.kelas }}</td>
@@ -231,14 +231,14 @@
 <script>
 import api from "@/utils/api";
 
+import getDataMixin from "@/utils/getDataMixin";
 import destroyMixin from "@/utils/destroyMixin";
 import clearInputMixin from "@/utils/clearInputMixin";
 
 export default {
-    mixins: [destroyMixin, clearInputMixin],
+    mixins: [getDataMixin, destroyMixin, clearInputMixin],
     data() {
         return {
-            // studentData: "",
             isAdd: null,
             newUser: {
                 nisn: "",
@@ -261,7 +261,11 @@ export default {
     methods: {
         async store() {
             const res = await api.post("user", this.newUser);
-            console.log(res);
+            if (res.data.msg === "1 Data recored") {
+                this.clearInput(this.newUser);
+                this.getData("user");
+                this.isAdd = !null;
+            }
         },
     },
 };

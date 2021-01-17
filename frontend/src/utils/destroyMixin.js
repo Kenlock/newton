@@ -1,4 +1,5 @@
 import api from "@/utils/api";
+import getDataMixin from "@/utils/getDataMixin.js";
 
 export default {
     /**
@@ -8,6 +9,8 @@ export default {
      * * return a response of request
      */
 
+    mixin: [getDataMixin],
+
     data() {
         return {
             data: "",
@@ -15,10 +18,10 @@ export default {
     },
 
     methods: {
-        async getData(url) {
-            const res = await api.get(url);
-            this.data = res.data;
-        },
+        // async getData(url) {
+        //     const res = await api.get(url);
+        //     this.data = res.data;
+        // },
         async destroy(url, id) {
             const res = await api.destroy(url, id);
             if (res.data === "1 Data Deleted") {

@@ -3,14 +3,13 @@ import api from "@/utils/api";
 export default {
     data() {
         return {
-            data: "",
+            getReqData: "",
         };
     },
     methods: {
-        async showData(url) {
+        async getData(url) {
             const res = await api.get(url);
-            this.data = res;
-            return this.data;
+            this.getReqData = res.data;
         },
     },
 };
