@@ -3,7 +3,7 @@ import api from "@/utils/api";
 export default {
     /**
      * @param {url} endpoint of api
-     * TODO : create a global function fo GET request
+     * TODO : create a global function for GET request
      * * return a response of GET request of an endpoint
      */
 
@@ -16,6 +16,9 @@ export default {
         async getData(url) {
             const res = await api.get(url);
             this.getReqData = res.data;
+        },
+        test() {
+            console.log("happy new year");
         },
     },
 };

@@ -1,9 +1,5 @@
 <template>
     <div>
-        <!-- <app-header :login="true"></app-header> -->
-
-        <!-- <admin-dashboard></admin-dashboard> -->
-
         <div class="container" :class="{ 'd-none': isAdd }">
             <div class="row">
                 <div class="col-lg-12">
