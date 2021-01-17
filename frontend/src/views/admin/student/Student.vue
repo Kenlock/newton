@@ -171,7 +171,10 @@
                                 >
                                     Create
                                 </button>
-                                <button class="btn btn-danger">
+                                <button
+                                    class="btn btn-danger"
+                                    @click="clearInput(newUser)"
+                                >
                                     Cancle
                                 </button>
                             </div>
@@ -227,10 +230,12 @@
 
 <script>
 import api from "@/utils/api";
+
 import destroyMixin from "@/utils/destroyMixin";
+import clearInputMixin from "@/utils/clearInputMixin";
 
 export default {
-    mixins: [destroyMixin],
+    mixins: [destroyMixin, clearInputMixin],
     data() {
         return {
             // studentData: "",
