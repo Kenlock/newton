@@ -141,6 +141,7 @@
                                     v-model="newUser.status"
                                 >
                                     <option value="admin">Admin</option>
+                                    <option value="guru">Guru</option>
                                     <option value="siswa">Siswa</option>
                                 </select>
                             </div>
@@ -277,7 +278,6 @@ export default {
             for (let i in this.newUser) {
                 this.newUser[i] = props[i];
             }
-            console.log(this.newUser);
         },
         async update() {
             const res = await api.put("user", this.newUser.id, this.newUser);

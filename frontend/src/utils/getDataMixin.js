@@ -15,10 +15,8 @@ export default {
     methods: {
         async getData(url) {
             const res = await api.get(url);
+
             this.getReqData = res.data;
-        },
-        test() {
-            console.log("happy new year");
         },
     },
 };

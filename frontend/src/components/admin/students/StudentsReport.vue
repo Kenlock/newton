@@ -53,7 +53,6 @@ import getDataMixin from "@/utils/getDataMixin";
 export default {
     data() {
         return {
-            allStudents: [],
             studentsCount: "",
         };
     },
