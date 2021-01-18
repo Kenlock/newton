@@ -6,7 +6,11 @@
             </div>
             <div class="card-body">
                 <ul class=" list-group-flush list-group">
-                    <li class=" list-group-item" v-for="n in news" :key="n.id">
+                    <li
+                        class=" list-group-item"
+                        v-for="n in getReqData"
+                        :key="n.id"
+                    >
                         {{ n.judul_berita }}
                     </li>
                 </ul>
@@ -23,22 +27,12 @@
 </template>
 
 <script>
-import api from "@/utils/api";
+import getDataMixin from "@/utils/getDataMixin";
 
 export default {
-    data() {
-        return {
-            news: "",
-        };
-    },
-    created() {
-        this.getNews();
-    },
-    methods: {
-        async getNews() {
-            const res = await api.get("news");
-            this.news = res.data;
-        },
+    mixins: [getDataMixin],
+    mounted() {
+        this.getData("news");
     },
 };
 </script>

@@ -16,7 +16,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="s in allStudents" :key="s.id">
+                        <tr v-for="s in getReqData" :key="s.id">
                             <td>{{ s.nisn }}</td>
                             <td>{{ s.nama }}</td>
                             <td>{{ s.kelas }}</td>
@@ -48,8 +48,7 @@
 </template>
 
 <script>
-// import Axios from "axios";
-import api from "@/utils/api";
+import getDataMixin from "@/utils/getDataMixin";
 
 export default {
     data() {
@@ -58,14 +57,9 @@ export default {
             studentsCount: "",
         };
     },
+    mixins: [getDataMixin],
     mounted() {
-        this.studentsReport();
-    },
-    methods: {
-        async studentsReport() {
-            const res = await api.get("user");
-            this.allStudents = res.data;
-        },
+        this.getData("user");
     },
 };
 </script>
