@@ -166,9 +166,11 @@
 </template>
 
 <script>
-import axios from "axios";
+import api from "@/utils/api";
+import clearInputMixin from "@/utils/clearInputMixin";
 
 export default {
+    mixins: [clearInputMixin],
     data() {
         return {
             registerData: {
@@ -191,25 +193,14 @@ export default {
         "app-copyright": () => import("@/components/utils/Copyright"),
     },
     methods: {
-        register() {
-            axios
-                .post("/user", this.registerData)
-                .then((result) => {
-                    if (
-                        result.msg == "1 Data Recorded" &&
-                        result.status == "admin"
-                    ) {
-                        this.$router.push("/admin");
-                    } else if (
-                        result.msg == "1 Data Recorded" &&
-                        result.status == "siswa"
-                    ) {
-                        console.log("Murid");
-                    }
-                })
-                .catch((err) => {
-                    console.log(err);
-                });
+        async register() {
+            const res = await api.post("user", this.registerData);
+
+            alert("Register Success");
+
+            this.clearInputs(this.registerData);
+
+            this.$router.push("/login");
         },
     },
 };

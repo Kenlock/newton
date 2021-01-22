@@ -299,7 +299,7 @@ export default {
 
             const res = await api.post("pmb", fd);
 
-            alert(res.data);
+            alert(res.data.msg);
 
             this.clearInputs(this.pendaftaran);
         },
