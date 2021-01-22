@@ -16,8 +16,7 @@ class UserController extends Controller
     {
         //
         // return User::all();
-        // return User::where('status', 'siswa')->get();
-        return User::all();
+        return User::where('status', 'siswa')->get();
     }
 
     public function studentsCount()

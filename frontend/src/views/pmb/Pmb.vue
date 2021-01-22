@@ -171,10 +171,7 @@
                                         class=" custom-file-input"
                                         ref="file"
                                         @change="
-                                            handleFileUpload(
-                                                this.files,
-                                                'url_izajah'
-                                            )
+                                            handleFileUpload($event, 'dokumen')
                                         "
                                     />
                                     <label
@@ -260,9 +257,9 @@ export default {
                 asalSekolah: "",
                 kota: "",
                 jurusan: "",
-                url_ijazah: "",
-                url_rapot: "",
-                url_surat_pernyataan: "",
+                dokumen: "",
+                // url_rapot: "",
+                // url_surat_pernyataan: "",
             },
             kota: [
                 { namaKota: "Pontianak" },
@@ -281,13 +278,17 @@ export default {
         "app-header": () => import("@/components/utils/Navbar"),
     },
     methods: {
-        async submit() {
-            const res = await api.post("pmb", this.pendaftaran);
-
-            console.log(res);
-        },
         handleFileUpload(e, props) {
             this.pendaftaran[props] = e.target.files[0];
+        },
+        async submit() {
+            const fd = new FormData();
+
+            for (let key in this.pendaftaran) {
+                fd.append(key, this.pendaftaran[key]);
+            }
+
+            const res = await api.post("pmb", fd);
         },
     },
 };

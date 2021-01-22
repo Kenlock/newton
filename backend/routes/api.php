@@ -19,15 +19,18 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::post('/login','UserController@login');
+Route::post('/login', 'UserController@login');
 
-Route::get('/user','UserController@index');
-Route::post('/user','UserController@store');
-Route::put('/user/{id}','UserController@update');
-Route::delete('/user/{id}','UserController@destroy');
+Route::get('/user', 'UserController@index');
+Route::post('/user', 'UserController@store');
+Route::put('/user/{id}', 'UserController@update');
+Route::delete('/user/{id}', 'UserController@destroy');
 
-Route::get('/news','BeritaController@index');
-Route::get('/news/{id}','BeritaController@spesificNews');
-Route::post('/news','BeritaController@store');
-Route::put('/news/{id}','BeritaController@update');
-Route::delete('/news/{id}','BeritaController@destroy');
+Route::get('/news', 'BeritaController@index');
+Route::get('/news/{id}', 'BeritaController@spesificNews');
+Route::post('/news', 'BeritaController@store');
+Route::put('/news/{id}', 'BeritaController@update');
+Route::delete('/news/{id}', 'BeritaController@destroy');
+
+
+Route::post('/pmb', 'PMBController@store');
