@@ -86,6 +86,11 @@ const routes = [
                 name: "News",
                 component: () => import("@/views/admin/news/News"),
             },
+            {
+                path: "pmb",
+                name: "PMB",
+                component: () => import("@/views/admin/pmb/Pmb"),
+            },
         ],
     },
     {

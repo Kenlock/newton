@@ -1,5 +1,7 @@
 <template>
     <div>
+        <app-header :login="true"></app-header>
+
         <admin-navigation></admin-navigation>
 
         <router-view></router-view>
@@ -10,6 +12,7 @@
 export default {
     components: {
         "admin-navigation": () => import("@/components/admin/AdminNavigation"),
+        "app-header": () => import("@/components/utils/Navbar"),
     },
 };
 </script>

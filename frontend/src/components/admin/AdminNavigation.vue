@@ -32,6 +32,13 @@
                             >
                                 <a class="text-dark">News</a>
                             </router-link>
+                            <router-link
+                                to="/admin/pmb"
+                                tag="li"
+                                class="breadcrumb-item"
+                            >
+                                <a class="text-dark">PMB</a>
+                            </router-link>
                         </ol>
                     </nav>
                 </div>
