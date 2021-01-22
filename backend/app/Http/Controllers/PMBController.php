@@ -39,12 +39,17 @@ class PMBController extends Controller
 
         $path = public_path() . "/pmb_docs";
 
-        $file = $request->file('dokumen');
-        $file->move($path, $file->getClientOriginalName());
+        $ijazah = $request->file('ijazah');
+        $ijazah->move($path, $ijazah->getClientOriginalName());
+
+        $rapor = $request->file('rapor');
+        $rapor->move($path, $rapor->getClientOriginalName());
+
+        $suratPernyataan = $request->file('suratPernyataan');
+        $suratPernyataan->move($path, $suratPernyataan->getClientOriginalName());
 
         $pmb = new PMB();
 
-        $pmb->dokumen = $file->getClientOriginalName();
         $pmb->nama = $request->nama;
         $pmb->jenisKelamin = $request->jenisKelamin;
         $pmb->alamat = $request->alamat;
@@ -56,6 +61,9 @@ class PMBController extends Controller
         $pmb->asalSekolah = $request->asalSekolah;
         $pmb->kota = $request->kota;
         $pmb->jurusan = $request->jurusan;
+        $pmb->ijazah = $ijazah->getClientOriginalName();
+        $pmb->rapor = $rapor->getClientOriginalName();
+        $pmb->suratPernyataan = $suratPernyataan->getClientOriginalName();
 
 
         $pmb->save();

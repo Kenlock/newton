@@ -171,7 +171,7 @@
                                         class=" custom-file-input"
                                         ref="file"
                                         @change="
-                                            handleFileUpload($event, 'dokumen')
+                                            handleFileUpload($event, 'ijazah')
                                         "
                                     />
                                     <label
@@ -191,6 +191,9 @@
                                         type="file"
                                         class="custom-file-input"
                                         id="customFile"
+                                        @change="
+                                            handleFileUpload($event, 'rapor')
+                                        "
                                     />
                                     <label
                                         class="custom-file-label"
@@ -209,6 +212,12 @@
                                         type="file"
                                         class="custom-file-input"
                                         id="customFile"
+                                        @change="
+                                            handleFileUpload(
+                                                $event,
+                                                'suratPernyataan'
+                                            )
+                                        "
                                     />
                                     <label
                                         class="custom-file-label"
@@ -257,9 +266,9 @@ export default {
                 asalSekolah: "",
                 kota: "",
                 jurusan: "",
-                dokumen: "",
-                // url_rapot: "",
-                // url_surat_pernyataan: "",
+                ijazah: "",
+                rapor: "",
+                suratPernyataan: "",
             },
             kota: [
                 { namaKota: "Pontianak" },

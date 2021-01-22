@@ -26,7 +26,9 @@ class CreatePMBSTable extends Migration
             $table->string("asalSekolah");
             $table->string("kota");
             $table->string("jurusan");
-            $table->string("dokumen");
+            $table->string("ijazah");
+            $table->string("rapor");
+            $table->string("suratPernyataan");
             $table->timestamps();
         });
     }
