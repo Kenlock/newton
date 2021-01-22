@@ -15,6 +15,8 @@ class PMBController extends Controller
     public function index()
     {
         //
+
+        return PMB::all();
     }
 
     /**
@@ -102,9 +104,45 @@ class PMBController extends Controller
      * @param  \App\PMB  $pMB
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PMB $pMB)
+    public function update(Request $request, $id)
     {
         //
+        $pmb = PMB::findOrFail($id);
+
+        $path = public_path() . "/pmb_docs";
+
+        $ijazah = $request->file('ijazah');
+        $ijazah->move($path, $ijazah->getClientOriginalName());
+
+        $rapor = $request->file('rapor');
+        $rapor->move($path, $rapor->getClientOriginalName());
+
+        $suratPernyataan = $request->file('suratPernyataan');
+        $suratPernyataan->move($path, $suratPernyataan->getClientOriginalName());
+
+        $pmb = new PMB();
+
+        $pmb->nama = $request->nama;
+        $pmb->jenisKelamin = $request->jenisKelamin;
+        $pmb->alamat = $request->alamat;
+        $pmb->noTelp = $request->noTelp;
+        $pmb->email = $request->email;
+        $pmb->password = $request->password;
+        $pmb->tempat = $request->tempat;
+        $pmb->tanggalLahir = $request->tanggalLahir;
+        $pmb->asalSekolah = $request->asalSekolah;
+        $pmb->kota = $request->kota;
+        $pmb->jurusan = $request->jurusan;
+        $pmb->ijazah = $ijazah->getClientOriginalName();
+        $pmb->rapor = $rapor->getClientOriginalName();
+        $pmb->suratPernyataan = $suratPernyataan->getClientOriginalName();
+
+
+        $pmb->save();
+
+        return response()->json([
+            'msg' => '1 Data Recored'
+        ]);
     }
 
     /**
@@ -113,8 +151,11 @@ class PMBController extends Controller
      * @param  \App\PMB  $pMB
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PMB $pMB)
+    public function destroy($id)
     {
         //
+
+        PMB::findOrFail($id)->delete();
+        return '1 Data Deleted';
     }
 }
