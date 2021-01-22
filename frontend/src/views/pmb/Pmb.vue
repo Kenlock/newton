@@ -248,10 +248,10 @@
 
 <script>
 import api from "@/utils/api";
-
-// import axios from "axios";
+import clearInputMixin from "@/utils/clearInputMixin";
 
 export default {
+    mixins: [clearInputMixin],
     data() {
         return {
             pendaftaran: {
@@ -298,6 +298,10 @@ export default {
             }
 
             const res = await api.post("pmb", fd);
+
+            alert(res.data);
+
+            this.clearInputs(this.pendaftaran);
         },
     },
 };
