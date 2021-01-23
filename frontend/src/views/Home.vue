@@ -198,8 +198,7 @@
                                         <b>Erik</b>
                                         <div>
                                             Medalion of Excelence at LKS
-                                            Nasional 2020 Artificial
-                                            Intelligence 🏅
+                                            Nasional 2020 Web Technologies 🏅
                                         </div>
                                     </div>
                                 </div>

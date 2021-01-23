@@ -8,8 +8,9 @@
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col">
-                                <label for="">Nama</label>
+                                <label for="nama">Nama</label>
                                 <input
+                                    id="nama"
                                     type="text"
                                     class="form-control"
                                     v-model="pendaftaran.nama"
@@ -21,14 +22,15 @@
                         <div class="form-row">
                             <div class="col">
                                 <div>
-                                    <label for="">Jenis kelamin</label>
+                                    <label for="jenis-kelamin"
+                                        >Jenis kelamin</label
+                                    >
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input
                                         class="form-check-input"
                                         type="radio"
                                         name="inlineRadioOptions"
-                                        id="inlineRadio1"
                                         value="laki-laki"
                                         v-model="pendaftaran.jenisKelamin"
                                     />
@@ -43,7 +45,6 @@
                                         class="form-check-input"
                                         type="radio"
                                         name="inlineRadioOptions"
-                                        id="inlineRadio2"
                                         value="perempuan"
                                         v-model="pendaftaran.jenisKelamin"
                                     />
@@ -55,8 +56,9 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <label for="">Alamat</label>
+                                <label for="alamat">Alamat</label>
                                 <textarea
+                                    id="alamat"
                                     name="alamat"
                                     cols="10"
                                     rows="5"
@@ -69,16 +71,18 @@
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col">
-                                <label for="">No.Telp</label>
+                                <label for="no-telp">No.Telp</label>
                                 <input
+                                    id="no-telp"
                                     type="number"
                                     class="form-control"
                                     v-model="pendaftaran.noTelp"
                                 />
                             </div>
                             <div class="col">
-                                <label for="">Email</label>
+                                <label for="email">Email</label>
                                 <input
+                                    id="email"
                                     type="email"
                                     class="form-control"
                                     v-model="pendaftaran.email"
@@ -89,16 +93,18 @@
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col">
-                                <label for="">password</label>
+                                <label for="password">Passowrd</label>
                                 <input
+                                    id="password"
                                     type="password"
                                     class="form-control"
                                     v-model="pendaftaran.password"
                                 />
                             </div>
                             <div class="col">
-                                <label for="">tempat</label>
+                                <label for="tempat">Tempat</label>
                                 <input
+                                    id="tempat"
                                     type="text"
                                     class="form-control"
                                     v-model="pendaftaran.tempat"
@@ -109,16 +115,18 @@
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col">
-                                <label for="">tanggal lahir</label>
+                                <label for="tanggal-lahir">Tanggal Lahir</label>
                                 <input
+                                    id="tanggal-lahir"
                                     type="date"
                                     class="form-control"
                                     v-model="pendaftaran.tanggalLahir"
                                 />
                             </div>
                             <div class="col">
-                                <label for="">Asal Sekolah</label>
+                                <label for="asal-sekolah">Asal Sekolah</label>
                                 <input
+                                    id="asal-sekolah"
                                     type="text"
                                     class="form-control"
                                     v-model="pendaftaran.asalSekolah"
@@ -129,10 +137,10 @@
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col">
-                                <label for="">kota</label>
+                                <label for="kota">Kota</label>
                                 <select
-                                    name=""
-                                    id=""
+                                    name="kota"
+                                    id="kota"
                                     class="form-control"
                                     v-model="pendaftaran.kota"
                                 >
@@ -145,10 +153,10 @@
                                 </select>
                             </div>
                             <div class="col">
-                                <label for="">Jurusan</label>
+                                <label for="Jurusan">Jurusan</label>
                                 <select
-                                    name=""
-                                    id=""
+                                    name="jurusan"
+                                    id="jurusan"
                                     class="form-control"
                                     v-model="pendaftaran.jurusan"
                                 >
@@ -165,11 +173,12 @@
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col">
+                                <label for="ijazah">Ijzah</label>
                                 <div class="custom-file">
                                     <input
                                         type="file"
                                         class=" custom-file-input"
-                                        ref="file"
+                                        id="ijazah"
                                         @change="
                                             handleFileUpload($event, 'ijazah')
                                         "
@@ -186,11 +195,12 @@
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col">
+                                <label for="rapor">Rapor</label>
                                 <div class="custom-file">
                                     <input
                                         type="file"
                                         class="custom-file-input"
-                                        id="customFile"
+                                        id="rapor"
                                         @change="
                                             handleFileUpload($event, 'rapor')
                                         "
@@ -207,11 +217,14 @@
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col">
+                                <label for="surat-pernyataan"
+                                    >Surat Pernyataan</label
+                                >
                                 <div class="custom-file">
                                     <input
                                         type="file"
                                         class="custom-file-input"
-                                        id="customFile"
+                                        id="surat-pernyataan"
                                         @change="
                                             handleFileUpload(
                                                 $event,

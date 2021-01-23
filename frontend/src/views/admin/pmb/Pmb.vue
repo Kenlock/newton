@@ -30,7 +30,7 @@
                                     <td>{{ p.alamat }}</td>
                                     <td>{{ p.noTelp }}</td>
                                     <td>{{ p.email }}</td>
-                                    <td>{{ p.passowrd }}</td>
+                                    <td>{{ p.password }}</td>
                                     <td>{{ p.tempat }}</td>
                                     <td>{{ p.tanggalLahir }}</td>
                                     <td>{{ p.asalSekolah }}</td>
