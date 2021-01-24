@@ -5,7 +5,10 @@
                 <h3 class="my-4">News Report</h3>
 
                 <table class="table table-hover table-borderless">
-                    <router-link to="/admin/news" class="mt-4" tag="caption"
+                    <router-link
+                        to="/admin/news"
+                        class="mt-4 c-pointer"
+                        tag="caption"
                         >View more</router-link
                     >
                     <thead>

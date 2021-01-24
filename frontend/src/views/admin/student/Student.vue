@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <button
-                        class="btn v-btn-danger text-white"
+                        class="btn btn-primary text-white"
                         @click="isAdd = !isAdd"
                     >
                         Add Students

@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,500&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.c-pointer {
+    cursor: pointer;
+}
+
+.v-text-warning {
+    color: #ff4b33;
+}
+
+.v-bg-warning {
+    background-color: #ffbd1d;
+}
+
+.v-btn-danger {
+    background-color: #ff4b33 !important;
+}
+
+.v-btn-outline-danger {
+    border: 1px solid #ff4b33;
+}
+
+.v-avatar {
+    width: 70px;
+    height: 70px;
+}
+
+.v-bg-light {
+    background-color: #e2e3e4;
+}
+
+.v-success-badge {
+    background-color: rgba(40, 167, 69, 0.5);
+}
+
+.v-danger-badge {
+    background-color: rgba(220, 53, 69, 0.5);
+}
+
+.v-btn-primary {
+    background-color: #3040e1;
+}
