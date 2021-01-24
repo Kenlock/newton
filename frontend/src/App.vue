@@ -10,13 +10,7 @@
     </div>
 </template>
 <script>
-export default {
-    components: {
-        // "navbar-app": () => import("@/components/utils/Navbar"),
-        // "footer-app": () => import("@/components/utils/Footer"),
-        // "copyright-app": () => import("@/components/utils/Copyright"),
-    },
-};
+export default {};
 </script>
 
 <style>
@@ -50,5 +44,17 @@ export default {
 .v-avatar {
     width: 70px;
     height: 70px;
+}
+
+.v-bg-light {
+    background-color: #e2e3e4;
+}
+
+.v-success-badge {
+    background-color: rgba(40, 167, 69, 0.5);
+}
+
+.v-danger-badge {
+    background-color: rgba(220, 53, 69, 0.5);
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <app-header :login="true"></app-header>
+        <!-- <app-header :login="true"></app-header> -->
 
         <admin-navigation></admin-navigation>
 

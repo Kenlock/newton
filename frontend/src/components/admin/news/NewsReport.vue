@@ -1,26 +1,20 @@
 <template>
     <div>
-        <div class="card shadow-lg">
-            <div class="card-header">
-                <b class="h5">News Report 🧾</b>
-            </div>
+        <div class="card shadow border-0">
             <div class="card-body">
-                <ul class=" list-group-flush list-group">
-                    <li
-                        class=" list-group-item"
-                        v-for="n in getReqData"
-                        :key="n.id"
+                <h3 class="my-4">News Report</h3>
+
+                <table class="table table-hover table-borderless">
+                    <router-link to="/admin/news" class="mt-4" tag="caption"
+                        >View more</router-link
                     >
-                        {{ n.judul_berita }}
-                    </li>
-                </ul>
-            </div>
-            <div class="card-footer text-center">
-                <router-link
-                    to="/admin/news"
-                    class="badge badge-primary border-0 py-2 w-25 rounded"
-                    >View more</router-link
-                >
+                    <thead>
+                        <tr>
+                            <th class="text-muted">NO</th>
+                            <th class="text-muted">JUDUL BERITA</th>
+                        </tr>
+                    </thead>
+                </table>
             </div>
         </div>
     </div>

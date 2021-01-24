@@ -1,22 +1,37 @@
 <template>
     <div>
-        <div class="card shadow-lg">
-            <div class="card-header">
-                <b class="h5">All Students Report 📘</b>
-            </div>
-            <div class="card-body table-responsive">
-                <table class="table">
+        <div class="card shadow border-0">
+            <div class="card-body">
+                <h3 class="my-4">Students Details</h3>
+
+                <table class="table table-borderless table-hover">
+                    <router-link
+                        to="/admin/student"
+                        tag="caption"
+                        class="mt-4 c-pointer"
+                        >View more</router-link
+                    >
                     <thead>
                         <tr>
-                            <th>NISN</th>
-                            <th>Nama</th>
-                            <th>Kelas</th>
-                            <th>Jurusan</th>
-                            <th>Aktif</th>
+                            <th class="text-muted">NO</th>
+                            <th class="text-muted">NISN</th>
+                            <th class="text-muted">NAMA</th>
+                            <th class="text-muted">KELAS</th>
+                            <th class="text-muted">JURUSAN</th>
+                            <th class="text-muted">AKTIF</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="s in getReqData" :key="s.id">
+                        <tr
+                            v-for="(s, index) in getReqData"
+                            :key="s.id"
+                            class="c-pointer"
+                        >
+                            <td>
+                                <div class="v-bg-light rounded text-center">
+                                    {{ (index += 1) }}
+                                </div>
+                            </td>
                             <td>{{ s.nisn }}</td>
                             <td>{{ s.nama }}</td>
                             <td>{{ s.kelas }}</td>
@@ -24,24 +39,19 @@
                             <td>
                                 <div
                                     v-if="s.aktif === 'y'"
-                                    class="badge badge-success"
+                                    class="badge v-success-badge p-2"
                                 >
-                                    Aktif
+                                    <div class="text-dark">Aktif</div>
                                 </div>
-                                <div v-else class="badge badge-danger">
-                                    Tidak Aktif
+                                <div v-else class="badge v-danger-badge p-2">
+                                    <div class="text-dark">
+                                        Tidak Aktif
+                                    </div>
                                 </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-            </div>
-            <div class="card-footer text-center">
-                <router-link
-                    to="/admin/student"
-                    class="badge badge-primary border-0 py-2 w-25 rounded"
-                    >View more</router-link
-                >
             </div>
         </div>
     </div>
@@ -61,6 +71,8 @@ export default {
     mounted() {
         this.getData("user");
     },
+
+    // #299750
 };
 </script>
 
