@@ -293,7 +293,6 @@ export default {
                 { namaJurusan: "Teknik Komputer Jaringan" },
                 { namaJurusan: "Pemasaran" },
             ],
-            dokumen: "",
         };
     },
     components: {

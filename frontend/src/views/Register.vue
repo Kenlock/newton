@@ -115,7 +115,7 @@
                                 class="form-control border-left-0 border-top-0 border-right-0"
                             >
                                 <option value="siswa">Siswa</option>
-                                <option value="admin">Admin</option>
+                                <!-- <option value="admin">Admin</option> -->
                             </select>
                         </div>
                         <div class="form-group pt-4">
@@ -126,7 +126,7 @@
                                 class="form-control border-left-0 border-top-0 border-right-0"
                             >
                                 <option value="y">Ya</option>
-                                <option value="n">Tidak</option>
+                                <!-- <option value="n">Tidak</option> -->
                             </select>
                         </div>
                         <div class="form-grop">
