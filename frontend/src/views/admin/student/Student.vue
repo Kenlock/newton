@@ -190,24 +190,34 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class=" table-responsive">
-                        <table class=" table">
+                        <table class=" table table-borderless table-hover">
                             <thead>
                                 <tr>
-                                    <th>NISN</th>
-                                    <th>Nama</th>
-                                    <th>Kelas</th>
-                                    <th>Jurusan</th>
-                                    <th colspan="2" class="text-center">
+                                    <th class="text-muted">NO</th>
+                                    <th class="text-muted">NISN</th>
+                                    <th class="text-muted">NAMA</th>
+                                    <th class="text-muted">KELAS</th>
+                                    <th class="text-muted">JURUSAN</th>
+                                    <th class="text-muted">NO.TELP</th>
+                                    <th class="text-muted">EMAIL</th>
+                                    <th colspan="2" class="text-center text-muted">
                                         Action
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="s in getReqData" :key="s.id">
+                                <tr v-for="(s , index) in getReqData" :key="s.id" class="c-pointer">
+                                    <td>
+                                        <div class="bg-light-400 rounded text-center">
+                                            {{ index + 1}}
+                                        </div>
+                                    </td>
                                     <td>{{ s.nisn }}</td>
                                     <td>{{ s.nama }}</td>
                                     <td>{{ s.kelas }}</td>
                                     <td>{{ s.jurusan }}</td>
+                                    <td>{{ s.telp }}</td>
+                                    <td>{{ s.email }}</td>
                                     <td>
                                         <button
                                             class="btn btn-warning"
