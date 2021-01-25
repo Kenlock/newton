@@ -1,11 +1,12 @@
-// fonts
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,500&display=swap")
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,500&display=swap")
 
-// bootstrap card
-    // @import "../../../node_modules/bootstrap/scss/_card.scss"
+$blue : #2d31ea
+$yellow : #ffbd1d
+$red : #ff4b33
+$grey-400 : #ced4da
 
-$blue : #3040e1
+// @import '../../../node_modules/bootstrap/scss/_variables.scss'
 
 *
     font-family: "Poppins", sans-serif
@@ -13,11 +14,8 @@ $blue : #3040e1
 .c-pointer
     cursor: pointer
 
-.v-text-warning
-    color: #ff4b33
-
-.v-bg-warning
-    background-color: #ffbd1d
+.bg-light-400
+    background-color: #ced4da
 
 .v-btn-danger
     background-color: #ff4b33 !important
@@ -29,19 +27,20 @@ $blue : #3040e1
     width: 70px
     height: 70px
 
-.v-bg-light
+.bg-light
     background-color: #e2e3e4
 
-.v-success-badge
-    background-color: rgba(40, 167, 69, 0.5)
+.v-badge-success
+    background-color: rgba(40, 167, 69, 0.2)
+
+.badge-success
+    // background-color: rgba(40, 167, 69, 0.2)
+    background-color : #97d4e7
 
 .v-danger-badge
     background-color: rgba(220, 53, 69, 0.5)
 
-.v-btn-primary
-    background-color: $blue
-
-// Bootstrap and its default variables
+//  Bootstrap and its default variables
 @import '../../../node_modules/bootstrap/scss/bootstrap'
-// BootstrapVue and its default variables
+//  BootstrapVue and its default variables
 @import '../../../node_modules/bootstrap-vue/src/index.scss'

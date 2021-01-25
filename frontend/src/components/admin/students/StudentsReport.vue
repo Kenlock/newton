@@ -28,8 +28,8 @@
                             class="c-pointer"
                         >
                             <td>
-                                <div class="v-bg-light rounded text-center">
-                                    {{ (index += 1) }}
+                                <div class="bg-light-400 rounded text-center">                                
+                                    {{ (index += 1) }}                                    
                                 </div>
                             </td>
                             <td>{{ s.nisn }}</td>
@@ -39,14 +39,13 @@
                             <td>
                                 <div
                                     v-if="s.aktif === 'y'"
-                                    class="badge v-success-badge p-2"
+                                    class="badge badge-success p-2"
                                 >
-                                    <div class="text-dark">Aktif</div>
+                                    Aktif
+                                    <!-- <div class="text-dark">Aktif</div> -->
                                 </div>
-                                <div v-else class="badge v-danger-badge p-2">
-                                    <div class="text-dark">
-                                        Tidak Aktif
-                                    </div>
+                                <div v-else class="badge badge-danger p-2">
+                                    Tidak Aktif                                    
                                 </div>
                             </td>
                         </tr>

@@ -10,10 +10,11 @@
     </div>
 </template>
 <script>
-// import styles from "@/assets/css/styles.module.sass";
-// import styles from "@/assets/css/style.css";
 
-import styles from "@/assets/styles/_app.sass";
+
+import styles from './assets/styles/_app.sass'
+
+// import styles from '@/assets/css/style.css'
 
 export default {};
 </script>

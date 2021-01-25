@@ -7,7 +7,7 @@
                         class="col-sm-12 col-md-12 col-lg-6"
                         data-aos="fade-right"
                     >
-                        <div class=" h1 font-weight-bold v-text-warning">
+                        <div class=" h1 font-weight-bold text-danger">
                             Sign Up
                         </div>
                         <p class=" text-muted">

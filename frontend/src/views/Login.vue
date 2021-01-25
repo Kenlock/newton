@@ -6,7 +6,7 @@
             <div class="container pt-5">
                 <div class="row">
                     <div class="col-lg-6" data-aos="fade-right">
-                        <div class="h1 font-weight-bold v-text-warning">
+                        <div class="h1 font-weight-bold text-danger">
                             Sign In
                         </div>
                         <p class=" text-muted">

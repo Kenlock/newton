@@ -19,6 +19,11 @@ class UserController extends Controller
         return User::where('status', 'siswa')->get();
     }
 
+    public function staff()
+    {
+        return User::where('status', 'admin')->get();
+    }
+
     public function studentsCount()
     {
         return User::where('status', 'siswa')->get()->count();

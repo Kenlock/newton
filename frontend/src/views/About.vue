@@ -8,12 +8,12 @@
                     <div class="col-lg-12" data-aos="fade-right">
                         <div class=" h2 mt-5">
                             We are on mission to
-                            <span class=" v-text-warning font-weight-bold"
+                            <span class=" text-danger font-weight-bold"
                                 >provide</span
                             >
                             a premier educational experience customized to needs
                             of each
-                            <span class=" v-text-warning font-weight-bold"
+                            <span class=" text-danger font-weight-bold"
                                 >student</span
                             >.
                         </div>
@@ -29,7 +29,7 @@
                             <div class="card-body">
                                 <h3 class=" font-weight-bold">
                                     Our
-                                    <span class=" v-text-warning">Mission</span>
+                                    <span class=" text-danger">Mission</span>
                                 </h3>
                                 <p class=" text-muted">
                                     Vocational High School is on mission to
@@ -69,13 +69,13 @@
                             <div class="card-body">
                                 <h3 class=" font-weight-bold">
                                     Our
-                                    <span class=" v-text-warning">Values</span>
+                                    <span class=" text-danger">Values</span>
                                 </h3>
                                 <p class=" text-muted">
                                     We are going to connect students and
                                     famillies with great teachers. We belive
                                     that behind every get
-                                    <span class=" v-text-warning"> "aha" </span
+                                    <span class=" text-danger"> "aha" </span
                                     >moment, light-blub going off, or profound
                                     realization, there is a teacher. Our
                                     teacher's job is to bring forth that spark

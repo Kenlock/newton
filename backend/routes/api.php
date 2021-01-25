@@ -32,8 +32,9 @@ Route::post('/news', 'BeritaController@store');
 Route::put('/news/{id}', 'BeritaController@update');
 Route::delete('/news/{id}', 'BeritaController@destroy');
 
-
 Route::get('/pmb', 'PMBController@index');
 Route::get('/pmb', 'PMBController@index');
 Route::post('/pmb/{id}', 'PMBController@update');
 Route::delete('/pmb/{id}', 'PMBController@destroy');
+
+Route::get('/staff', 'UserController@staff');

@@ -3,14 +3,14 @@
         <app-header></app-header>
 
         <!-- jumbotron -->
-        <div class=" jumbotron jumbotron-fluid v-bg-warning">
+        <div class=" jumbotron jumbotron-fluid bg-warning">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 d-flex align-items-center">
                         <div data-aos="fade-right">
                             <div class="display-4 font-weight-bold mt-5">
                                 Discover Power of the
-                                <span class="v-text-warning font-weight-bold"
+                                <span class="text-danger font-weight-bold"
                                     >Knowladge</span
                                 >
                             </div>
@@ -55,7 +55,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="h1 font-weight-bold">
-                            Our <span class=" v-text-warning">Majors</span>
+                            Our <span class=" text-danger">Majors</span>
                         </div>
                         <div class="text-muted">
                             We provide courses that can help students discover
@@ -144,7 +144,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="h1 font-weight-bold">
-                            Our <span class="v-text-warning">Achievements</span>
+                            Our <span class="text-danger">Achievements</span>
                             🏆
                         </div>
                         <div class="text-muted">
@@ -228,7 +228,7 @@
                     <div class="col-lg-12">
                         <div class=" h1 font-weight-bold">
                             Join Our
-                            <span class=" v-text-warning">Extracurricular</span>
+                            <span class=" text-danger">Extracurricular</span>
                         </div>
                         <div class=" text-muted">
                             Join our extracurricular to to practice your skills
@@ -303,7 +303,7 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class="h1 font-weight-bold">
-                            What's <span class="v-text-warning">New ?</span>
+                            What's <span class="text-danger">New ?</span>
                         </div>
                         <div class="text-muted">
                             stay updated, read the latest news about us
@@ -396,7 +396,7 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class=" h1 font-weight-bold">
-                            Contact <span class=" v-text-warning">Us</span>
+                            Contact <span class=" text-danger">Us</span>
                         </div>
                     </div>
                 </div>
@@ -409,7 +409,7 @@
                         />
                     </div>
                     <div class="col-lg-6">
-                        <div class=" font-weight-bold v-text-warning">
+                        <div class=" font-weight-bold text-danger">
                             WE WOULD LIKE TO HEAR YOU
                         </div>
                         <div class="mt-3">
