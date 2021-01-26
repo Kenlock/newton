@@ -68,7 +68,7 @@ export default {
     },
     mixins: [getDataMixin],
     mounted() {
-        this.getData("user");
+        this.getData("staff");
     },
 
     // #299750

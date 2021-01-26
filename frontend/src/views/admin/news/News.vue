@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <button
-                        class="btn v-btn-danger text-white"
+                        class="btn btn-primary text-white"
                         @click="isAdd = !isAdd"
                     >
                         Add News
@@ -24,7 +24,6 @@
                                             n.news_img
                                     "
                                     class="card-img"
-                                    alt="..."
                                 />
                             </div>
                             <div class="col-md-8">

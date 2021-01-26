@@ -16,19 +16,28 @@
                     <admin-news-report></admin-news-report>
                 </div>
             </div>
+            <div class="row pt-4">
+                <div class="col-lg-12">
+                    <!-- staff report -->
+                    <admin-staff-report></admin-staff-report>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
-import api from "@/utils/api.js";
+import getDataMixin from "@/utils/getDataMixin";
 
 export default {
+    mixins: [getDataMixin],
+
     data() {
         return {
             info: {
                 students: "",
                 news: "",
+                staff: "",
             },
         };
     },
@@ -37,19 +46,17 @@ export default {
         "admin-student-report": () =>
             import("@/components/admin/students/StudentsReport"),
         "admin-news-report": () => import("@/components/admin/news/NewsReport"),
+        "admin-staff-report": () =>
+            import("@/components/admin/staff/StaffReport"),
     },
     created() {
-        this.getStudents();
-        this.getNews();
+        this.getInfo();
     },
     methods: {
-        async getStudents() {
-            const res = await api.get("user");
-            this.info.students = res.data.length;
-        },
-        async getNews() {
-            const res = await api.get("news");
-            this.info.news = res.data.length;
+        async getInfo() {
+            this.info.students = await this.getData("user", true);
+            this.info.news = await this.getData("news", true);
+            this.info.staff = await this.getData("staff", true);
         },
     },
 };
