@@ -6,7 +6,7 @@
 
                 <table class="table table-borderless table-hover">
                     <router-link
-                        to="/admin/student"
+                        to="/admin/staff"
                         tag="caption"
                         class="mt-4 c-pointer"
                         >View more</router-link
