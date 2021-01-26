@@ -2,7 +2,7 @@
     <div>
         <div class="card shadow border-0">
             <div class="card-body">
-                <h3 class="my-4">Students Details</h3>
+                <h3 class="my-4">Staff Details</h3>
 
                 <table class="table table-borderless table-hover">
                     <router-link
@@ -14,10 +14,10 @@
                     <thead>
                         <tr>
                             <th class="text-muted">NO</th>
-                            <th class="text-muted">NISN</th>
                             <th class="text-muted">NAMA</th>
-                            <th class="text-muted">KELAS</th>
-                            <th class="text-muted">JURUSAN</th>
+                            <th class="text-muted">STATUS</th>
+                            <th class="text-muted">TELP</th>
+                            <th class="text-muted">EMAIL</th>
                             <th class="text-muted">AKTIF</th>
                         </tr>
                     </thead>
@@ -32,10 +32,10 @@
                                     {{ (index += 1) }}
                                 </div>
                             </td>
-                            <td>{{ s.nisn }}</td>
-                            <td>{{ s.nama }}</td>
-                            <td>{{ s.kelas }}</td>
-                            <td>{{ s.jurusan }}</td>
+                            <td>{{ s.nama.toUpperCase() }}</td>
+                            <td>{{ s.status }}</td>
+                            <td>{{ s.telp }}</td>
+                            <td>{{ s.email }}</td>
                             <td>
                                 <div
                                     v-if="s.aktif === 'y'"
