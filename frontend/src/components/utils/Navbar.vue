@@ -13,7 +13,7 @@
                     class="c-pointer font-weight-bold"
                     tag="b-navbar-brand"
                 >
-                    <span class="v-text-warning"
+                    <span class="text-danger"
                         >Vocational High School</span
                     ></router-link
                 >

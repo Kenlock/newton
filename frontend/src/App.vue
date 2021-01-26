@@ -10,9 +10,7 @@
     </div>
 </template>
 <script>
-
-
-import styles from './assets/styles/_app.sass'
+import styles from "./assets/styles/_app.sass";
 
 // import styles from '@/assets/css/style.css'
 
