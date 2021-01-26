@@ -26,6 +26,20 @@
                                 <a class="text-dark">Students</a>
                             </router-link>
                             <router-link
+                                to="/admin/staff"
+                                tag="li"
+                                class="breadcrumb-item"
+                            >
+                                <a class="text-dark">Staff</a>
+                            </router-link>
+                            <router-link
+                                to="/admin/major"
+                                tag="li"
+                                class="breadcrumb-item"
+                            >
+                                <a class="text-dark">Major</a>
+                            </router-link>
+                            <router-link
                                 to="/admin/news"
                                 tag="li"
                                 class="breadcrumb-item"
