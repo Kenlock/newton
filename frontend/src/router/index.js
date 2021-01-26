@@ -91,6 +91,16 @@ const routes = [
                 name: "PMB",
                 component: () => import("@/views/admin/pmb/Pmb"),
             },
+            {
+                path: "staff",
+                name: "Staff",
+                component: () => import("@/views/admin/staff/Staff"),
+            },
+            {
+                path: "major",
+                name: "Major",
+                component: () => import("@/views/admin/major/Major"),
+            },
         ],
     },
     {
