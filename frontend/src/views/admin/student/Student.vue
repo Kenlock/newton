@@ -200,16 +200,25 @@
                                     <th class="text-muted">JURUSAN</th>
                                     <th class="text-muted">NO.TELP</th>
                                     <th class="text-muted">EMAIL</th>
-                                    <th colspan="2" class="text-center text-muted">
+                                    <th
+                                        colspan="2"
+                                        class="text-center text-muted"
+                                    >
                                         Action
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="(s , index) in getReqData" :key="s.id" class="c-pointer">
+                                <tr
+                                    v-for="(s, index) in getReqData"
+                                    :key="s.id"
+                                    class="c-pointer"
+                                >
                                     <td>
-                                        <div class="bg-light-400 rounded text-center">
-                                            {{ index + 1}}
+                                        <div
+                                            class="bg-light-400 rounded text-center"
+                                        >
+                                            {{ index + 1 }}
                                         </div>
                                     </td>
                                     <td>{{ s.nisn }}</td>

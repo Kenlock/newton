@@ -28,7 +28,7 @@
                             class="c-pointer"
                         >
                             <td>
-                                <div class="bg-light-400 rounded text-center">
+                                <div class="bg-grey-400 rounded text-center">
                                     {{ (index += 1) }}
                                 </div>
                             </td>
