@@ -22,14 +22,14 @@
                             <div class="mt-5 ">
                                 <router-link
                                     to="/about"
-                                    class="btn v-btn-danger text-white py-2 px-5"
+                                    class="btn btn-danger text-white py-2 px-5"
                                     tag="button"
                                 >
                                     About Us
                                 </router-link>
                                 <router-link
                                     to="/login"
-                                    class="btn v-btn-danger text-white  py-2 px-5 ml-3"
+                                    class="btn btn-danger text-white  py-2 px-5 ml-3"
                                     tag="button"
                                 >
                                     Join Us
