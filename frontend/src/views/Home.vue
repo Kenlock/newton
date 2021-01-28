@@ -237,12 +237,14 @@
                             class="card border-0 rounded-lg h-100"
                             data-aos="fade-up"
                         >
-                            <div class="card-body">
+                            <div class="inner">
                                 <img
                                     src="@/assets/img/it_software.jpg"
                                     alt=""
-                                    class="img-fluid rounded-sm"
+                                    class="card-img-top"
                                 />
+                            </div>
+                            <div class="card-body">
                                 <h3 class=" card-title mt-4">IT Software</h3>
                                 <p class="text-muted">
                                     A hands-on marketing course for executives
@@ -258,13 +260,14 @@
                             data-aos="fade-up"
                             data-aos-duration="1000"
                         >
-                            <div class="card-body ">
+                            <div class="inner">
                                 <img
                                     src="@/assets/img/web_tech.jpg"
-                                    alt=""
-                                    class="img-fluid rounded-sm"
+                                    class="card-img-top"
                                 />
-                                <h3 class=" card-title mt-4">
+                            </div>
+                            <div class="card-body ">
+                                <h3 class=" card-title">
                                     Web Technologies
                                 </h3>
                                 <p class="text-muted">
@@ -281,12 +284,13 @@
                             data-aos="fade-up"
                             data-aos-duration="1500"
                         >
-                            <div class="card-body ">
+                            <div class="inner">
                                 <img
                                     src="@/assets/img/robotics.jpg"
-                                    alt=""
-                                    class="img-fluid rounded-sm"
+                                    class="card-img-top"
                                 />
+                            </div>
+                            <div class="card-body ">
                                 <h3 class=" card-title mt-4">
                                     Mobile Robotics
                                 </h3>
@@ -316,7 +320,6 @@
                 <div class="row">
                     <div class="col-lg-12 text-center pb-3">
                         <div class="h1 font-weight-bold text-purple">
-                            <!-- What's <span class="text-danger">New ?</span> -->
                             What's New ?
                         </div>
                         <div class="text-muted">
@@ -330,12 +333,14 @@
                             class="card border-0 rounded-lg h-100"
                             data-aos="fade-up"
                         >
-                            <div class="card-body">
+                            <div class="inner">
                                 <img
                                     src="@/assets/img/a.jpg"
                                     alt=""
-                                    class="img-fluid rounded-sm"
+                                    class="card-img-top"
                                 />
+                            </div>
+                            <div class="card-body">
                                 <h3 class=" card-title mt-3">
                                     Internet Marketing
                                 </h3>
@@ -354,12 +359,14 @@
                             data-aos="fade-up"
                             data-aos-duration="1000"
                         >
-                            <div class="card-body">
+                            <div class="inner">
                                 <img
                                     src="@/assets/img/b.jpg"
                                     alt=""
-                                    class="img-fluid rounded-sm"
+                                    class="card-img-top"
                                 />
+                            </div>
+                            <div class="card-body">
                                 <h3 class=" card-title mt-3">SEO Marketing</h3>
                                 <p class="text-muted">
                                     A hands-on marketing course for executives
@@ -376,12 +383,14 @@
                             data-aos="fade-up"
                             data-aos-duration="1500"
                         >
-                            <div class="card-body">
+                            <div class="inner">
                                 <img
                                     src="@/assets/img/c.jpg"
                                     alt=""
-                                    class="img-fluid rounded-sm"
+                                    class="card-img-top"
                                 />
+                            </div>
+                            <div class="card-body">
                                 <h3 class=" card-title mt-3">Practical SMM</h3>
                                 <p class="text-muted">
                                     A hands-on marketing course for executives
