@@ -1,9 +1,9 @@
 <template>
-    <div class=" bg-white pt-5">
+    <div class="bg-white py-5">
         <div class="container pt-5">
             <div class="row">
                 <div class="col-lg-3">
-                    <div class="h3 font-weight-bold v-text-warning">
+                    <div class="h3 font-weight-bold text-purple">
                         Vocation High School
                     </div>
                     <small class=" text-justify">
@@ -11,7 +11,7 @@
                         experience customized to needs of each student.
                     </small>
                     <div class="mt-3">
-                        <button class="btn v-btn-danger text-white">
+                        <button class="btn btn-purple  py-3 px-5">
                             Join Us
                         </button>
                     </div>
@@ -73,7 +73,7 @@
                             class="form-control mb-3"
                             placeholder="Email"
                         />
-                        <button class=" px-5 btn v-btn-danger text-white">
+                        <button class=" px-5 btn btn-purple ">
                             Subscribe
                         </button>
                     </div>

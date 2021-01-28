@@ -4,7 +4,7 @@
 
         <b-navbar
             toggleable="lg"
-            class="bg-warning"
+            class="bg-light-yellow py-4"
             :class="{ 'fixed-top': login == false }"
         >
             <b-container>
@@ -13,7 +13,7 @@
                     class="c-pointer font-weight-bold"
                     tag="b-navbar-brand"
                 >
-                    <span class="text-danger"
+                    <span class="text-purple"
                         >Vocational High School</span
                     ></router-link
                 >
