@@ -2,15 +2,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,500&display=swap");
 
 $primary: #2d31ea;
-$warning: #ffbd1d;
+$light-primary: #71bff4;
+$warning: #fec952;
 $danger: #ff4b33;
+$success: #75debe;
 $grey-400: #ced4da;
+$purple: #50439f;
+$light-blue: #eff9ff;
+$light-yellow: #fdf5e8;
 
 $theme-colors: (
     "primary": $primary,
+    "light-primary": $light-primary,
     "warning": $warning,
     "danger": $danger,
+    "success": $success,
     "grey-400": $grey-400,
+    "purple": $purple,
+    "light-blue": $light-blue,
+    "light-yellow": $light-yellow,
 );
 
 * {
@@ -35,6 +45,15 @@ $theme-colors: (
 
 .v-danger-badge {
     background-color: rgba(220, 53, 69, 0.5);
+}
+
+.card {
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10);
 }
 
 @import "../../../node_modules/bootstrap/scss/functions";
