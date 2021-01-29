@@ -7,8 +7,9 @@
                 <b-skeleton-wrapper :loading="loading">
                     <template #loading>
                         <b-skeleton-table
-                            columns="6"
-                            rows="3"
+                            :columns="6"
+                            :rows="3"
+                            animation="throb"
                         ></b-skeleton-table>
                     </template>
 
@@ -77,46 +78,22 @@ export default {
             allStudents: [],
             studentsCount: "",
             loading: false,
-            loadingTime: 0,
-            maxLoadingTime: 2,
         };
     },
     mixins: [getDataMixin],
-    created() {
-        this.$_loadingTimeInterval = null;
-    },
-    watch: {
-        loading(newValue, oldValue) {
-            if (newValue !== oldValue) {
-                this.clearLoadingTimeInterval();
-
-                if (newValue) {
-                    this.$_loadingTimeInterval = setInterval(() => {
-                        this.loadingTime++;
-                    }, 1000);
-                }
-            }
-        },
-        loadingTime(newValue, oldValue) {
-            if (newValue !== oldValue) {
-                if (newValue === this.maxLoadingTime) {
-                    this.loading = false;
-                }
-            }
-        },
-    },
     mounted() {
         this.startLoading();
-        this.getData("user");
     },
     methods: {
-        startLoading() {
+        async startLoading() {
+            // set loading
             this.loading = true;
-            this.loadingTime = 0;
-        },
-        clearLoadingTimeInterval() {
-            clearInterval(this.$_loadingTimeInterval);
-            this.$_loadingTimeInterval = null;
+
+            // wait for data request
+            const res = await this.getData("user");
+
+            // set loading to false
+            this.loading = false;
         },
     },
 };
