@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <!-- <app-header :login="true"></app-header> -->
+    <div class="bg-light">
+        <app-header :login="true"></app-header>
 
         <admin-navigation></admin-navigation>
 

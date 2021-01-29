@@ -49,7 +49,7 @@
                             </div>
                             <div v-if="login">
                                 <button
-                                    class="btn v-btn-danger text-white"
+                                    class="btn btn-purple text-white"
                                     @click="logout()"
                                 >
                                     Log out

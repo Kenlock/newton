@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="card shadow border-0">
+        <div class="card  border-0">
             <div class="card-body">
                 <h3 class="my-4">News Report</h3>
 

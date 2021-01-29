@@ -6,7 +6,7 @@
             <div class="container pt-5">
                 <div class="row">
                     <div class="col-lg-6" data-aos="fade-right">
-                        <div class="h1 font-weight-bold text-danger">
+                        <div class="h1 font-weight-bold text-purple">
                             Sign In
                         </div>
                         <p class=" text-muted">
@@ -30,7 +30,7 @@
                         </div>
                         <div class="form-group pt-5 ">
                             <button
-                                class=" btn v-btn-danger text-white col-3"
+                                class=" btn btn-purple text-white col-3"
                                 @click="login()"
                             >
                                 Sign In
@@ -38,7 +38,7 @@
                             <router-link
                                 to="/register"
                                 tag="button"
-                                class=" btn v-btn-outline-danger col-3 ml-2"
+                                class=" btn btn-outline-purple col-3 ml-2"
                             >
                                 Sign Up
                             </router-link>

@@ -7,7 +7,7 @@
                         class="col-sm-12 col-md-12 col-lg-6"
                         data-aos="fade-right"
                     >
-                        <div class=" h1 font-weight-bold text-danger">
+                        <div class=" h1 font-weight-bold text-purple">
                             Sign Up
                         </div>
                         <p class=" text-muted">
@@ -132,14 +132,14 @@
                         <div class="form-grop">
                             <button
                                 @click="register()"
-                                class="btn text-white v-btn-danger col-3"
+                                class="btn text-white btn-purple col-3"
                             >
                                 Sign Up
                             </button>
                             <router-link
                                 to="/login"
                                 tag="button"
-                                class="btn v-btn-outline-danger col-3 ml-3"
+                                class="btn btn-outline-purple col-3 ml-3"
                             >
                                 Sign In
                             </router-link>
