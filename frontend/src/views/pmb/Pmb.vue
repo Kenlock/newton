@@ -32,11 +32,12 @@
                                         type="radio"
                                         name="inlineRadioOptions"
                                         value="laki-laki"
+                                        id="laki-laki"
                                         v-model="pendaftaran.jenisKelamin"
                                     />
                                     <label
                                         class="form-check-label"
-                                        for="inlineRadio1"
+                                        for="laki-laki"
                                         >Laki-laki</label
                                     >
                                 </div>
@@ -45,12 +46,13 @@
                                         class="form-check-input"
                                         type="radio"
                                         name="inlineRadioOptions"
+                                        id="perempuan"
                                         value="perempuan"
                                         v-model="pendaftaran.jenisKelamin"
                                     />
                                     <label
                                         class="form-check-label"
-                                        for="inlineRadio2"
+                                        for="perempuan"
                                         >Perempuan</label
                                     >
                                 </div>
