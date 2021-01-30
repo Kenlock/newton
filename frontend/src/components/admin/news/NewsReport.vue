@@ -2,7 +2,7 @@
     <div>
         <div class="card  border-0">
             <div class="card-body">
-                <h3 class="my-4">News Report</h3>
+                <h3 class="my-4">News Details</h3>
 
                 <table class="table table-hover table-borderless">
                     <router-link
