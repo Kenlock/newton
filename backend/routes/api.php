@@ -38,3 +38,7 @@ Route::post('/pmb/{id}', 'PMBController@update');
 Route::delete('/pmb/{id}', 'PMBController@destroy');
 
 Route::get('/staff', 'UserController@staff');
+
+
+Route::get('/contactUs', 'ContactUsController@index');
+Route::post('/contactUs', 'ContactUsController@store');
