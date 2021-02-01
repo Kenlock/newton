@@ -240,7 +240,7 @@
                             <div class="inner">
                                 <img
                                     src="@/assets/img/it_software.jpg"
-                                    alt=""
+                                    loading="lazy"
                                     class="card-img-top"
                                 />
                             </div>
@@ -263,6 +263,7 @@
                             <div class="inner">
                                 <img
                                     src="@/assets/img/web_tech.jpg"
+                                    loading="lazy"
                                     class="card-img-top"
                                 />
                             </div>
@@ -287,6 +288,7 @@
                             <div class="inner">
                                 <img
                                     src="@/assets/img/robotics.jpg"
+                                    loading="lazy"
                                     class="card-img-top"
                                 />
                             </div>
@@ -336,7 +338,7 @@
                             <div class="inner">
                                 <img
                                     src="@/assets/img/a.jpg"
-                                    alt=""
+                                    loading="lazy"
                                     class="card-img-top"
                                 />
                             </div>
@@ -362,7 +364,7 @@
                             <div class="inner">
                                 <img
                                     src="@/assets/img/b.jpg"
-                                    alt=""
+                                    loading="lazy"
                                     class="card-img-top"
                                 />
                             </div>
@@ -386,7 +388,7 @@
                             <div class="inner">
                                 <img
                                     src="@/assets/img/c.jpg"
-                                    alt=""
+                                    loading="lazy"
                                     class="card-img-top"
                                 />
                             </div>
