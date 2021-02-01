@@ -21,7 +21,7 @@
                             <div class="mt-5">
                                 <router-link
                                     to="/login"
-                                    class="btn btn-purple text-white py-3 px-5 "
+                                    class="btn btn-purple py-3 px-5 "
                                 >
                                     Join Us
                                 </router-link>

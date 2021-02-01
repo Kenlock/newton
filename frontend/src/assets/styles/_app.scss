@@ -20,9 +20,6 @@
 // custom theme colors
 @import "./theme-colors";
 
-// custom styling
-@import "./card";
-
 // bootstrap required
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "../../../node_modules/bootstrap/scss/variables";
@@ -32,3 +29,7 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 //  BootstrapVue and its default variables
 @import "../../../node_modules/bootstrap-vue/src/index.scss";
+
+// custom styling
+@import "./card";
+@import "./button";
