@@ -78,6 +78,7 @@ export default {
             allStudents: [],
             studentsCount: "",
             loading: false,
+            find: "",
         };
     },
     mixins: [getDataMixin],
