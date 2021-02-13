@@ -1,7 +1,8 @@
 // custom theme colors
 
-$primary: #2d31ea;
-$warning: #fec952;
+$primary: #0f5cf2;
+$warning: #ffb800;
+$success: #00bc8b;
 $danger: #ff4b33;
 $grey-400: #ced4da;
 $purple: #50439f;
@@ -11,6 +12,7 @@ $light-yellow: #fdf5e8;
 $theme-colors: (
     "primary": $primary,
     "warning": $warning,
+    "success": $success,
     "danger": $danger,
     "grey-400": $grey-400,
     "purple": $purple,

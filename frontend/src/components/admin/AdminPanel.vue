@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
-                <div class="card c-pointer border-0 rounded">
+                <div class="card  border-0 rounded">
                     <div class="card-body">
                         <h4 class="card-title mt-2 mb-4">Students</h4>
                         <div class="d-flex">
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="card c-pointer border-0 rounded">
+                <div class="card  border-0 rounded">
                     <div class="card-body">
                         <h4 class="card-title mt-2 mb-4">Staff</h4>
                         <div class="d-flex ">
@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="card c-pointer border-0 rounded">
+                <div class="card  border-0 rounded">
                     <div class="card-body">
                         <h4 class="card-title mt-2 mb-4">News</h4>
                         <div class="d-flex ">

@@ -88,7 +88,7 @@
                                 <label for="telp">No.Telp</label>
                                 <input
                                     name="telp"
-                                    type="numer"
+                                    type="number"
                                     id="telp"
                                     class="form-control"
                                     v-model="newUser.telp"
@@ -140,7 +140,6 @@
                                     class="form-control"
                                     v-model="newUser.status"
                                 >
-                                    <option value="admin">Admin</option>
                                     <option value="siswa">Siswa</option>
                                 </select>
                             </div>
@@ -153,7 +152,6 @@
                                     v-model="newUser.aktif"
                                 >
                                     <option value="y">Ya</option>
-                                    <option value="n">Tidak</option>
                                 </select>
                             </div>
                         </div>
@@ -190,62 +188,72 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class=" table-responsive">
-                        <table class=" table table-borderless table-hover">
-                            <thead>
-                                <tr>
-                                    <th class="text-muted">NO</th>
-                                    <th class="text-muted">NISN</th>
-                                    <th class="text-muted">NAMA</th>
-                                    <th class="text-muted">KELAS</th>
-                                    <th class="text-muted">JURUSAN</th>
-                                    <th class="text-muted">NO.TELP</th>
-                                    <th class="text-muted">EMAIL</th>
-                                    <th
-                                        colspan="2"
-                                        class="text-center text-muted"
+                        <b-skeleton-wrapper :loading="loading">
+                            <template #loading>
+                                <b-skeleton-table
+                                    :columns="8"
+                                    :rows="8"
+                                    animation="throb"
+                                ></b-skeleton-table>
+                            </template>
+
+                            <table class=" table table-borderless table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="text-muted">NO</th>
+                                        <th class="text-muted">NISN</th>
+                                        <th class="text-muted">NAMA</th>
+                                        <th class="text-muted">KELAS</th>
+                                        <th class="text-muted">JURUSAN</th>
+                                        <th class="text-muted">NO.TELP</th>
+                                        <th class="text-muted">EMAIL</th>
+                                        <th
+                                            colspan="2"
+                                            class="text-center text-muted"
+                                        >
+                                            Action
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr
+                                        v-for="(s, index) in getReqData"
+                                        :key="s.id"
+                                        class="c-pointer"
                                     >
-                                        Action
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr
-                                    v-for="(s, index) in getReqData"
-                                    :key="s.id"
-                                    class="c-pointer"
-                                >
-                                    <td>
-                                        <div
-                                            class="bg-light-400 rounded text-center"
-                                        >
-                                            {{ index + 1 }}
-                                        </div>
-                                    </td>
-                                    <td>{{ s.nisn }}</td>
-                                    <td>{{ s.nama }}</td>
-                                    <td>{{ s.kelas }}</td>
-                                    <td>{{ s.jurusan }}</td>
-                                    <td>{{ s.telp }}</td>
-                                    <td>{{ s.email }}</td>
-                                    <td>
-                                        <button
-                                            class="btn btn-warning"
-                                            @click="edit(s)"
-                                        >
-                                            Edit
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button
-                                            class="btn btn-danger"
-                                            @click="destroy('user', s.id)"
-                                        >
-                                            Delete
-                                        </button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                        <td>
+                                            <div
+                                                class="bg-light-400 rounded text-center"
+                                            >
+                                                {{ index + 1 }}
+                                            </div>
+                                        </td>
+                                        <td>{{ s.nisn }}</td>
+                                        <td>{{ s.nama }}</td>
+                                        <td>{{ s.kelas }}</td>
+                                        <td>{{ s.jurusan }}</td>
+                                        <td>{{ s.telp }}</td>
+                                        <td>{{ s.email }}</td>
+                                        <td>
+                                            <button
+                                                class="btn btn-warning"
+                                                @click="edit(s)"
+                                            >
+                                                Edit
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button
+                                                class="btn btn-danger"
+                                                @click="destroy('user', s.id)"
+                                            >
+                                                Delete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </b-skeleton-wrapper>
                     </div>
                 </div>
             </div>
@@ -278,25 +286,35 @@ export default {
                 aktif: "",
                 id: "",
             },
+            loading: true,
         };
     },
     mounted() {
-        this.getData("user");
+        this.startLoading();
     },
     methods: {
+        async startLoading() {
+            this.loading = true;
+
+            await this.getData("user");
+
+            this.loading = false;
+        },
+
         async store() {
             const res = await api.post("user", this.newUser);
             if (res.data.msg === "1 Data Recorded") {
                 this.clearInputs(this.newUser);
                 this.getData("user");
             }
+            alert("1 Data Recorded");
         },
+
         edit(props) {
             this.close();
             for (let i in this.newUser) {
                 this.newUser[i] = props[i];
             }
-            console.log(this.newUser);
         },
         async update() {
             const res = await api.put("user", this.newUser.id, this.newUser);
