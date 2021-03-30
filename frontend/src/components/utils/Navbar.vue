@@ -14,7 +14,7 @@
                     tag="b-navbar-brand"
                 >
                     <span class="text-purple"
-                        >Vocational High School</span
+                        >Newton</span
                     ></router-link
                 >
 
