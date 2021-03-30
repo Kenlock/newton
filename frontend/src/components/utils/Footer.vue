@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="h3 font-weight-bold text-purple">
-                        Vocation High School
+                        Newton School
                     </div>
                     <small class=" text-justify">
                         We are on mission to provide a premier educational
